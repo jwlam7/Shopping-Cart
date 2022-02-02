@@ -1,0 +1,34 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5em 2.5em;
+	background-color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+.navShop,
+.navBrand {
+	color: white;
+	text-shadow: 1px 1px 5px white;
+}
+
+.navShop {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+.navBrand {
+	font-size: 2em;
+	letter-spacing: 4px;
+	margin: 0;
+}
+
+.navCart {
+	font-size: 2em;
+	color: rgb(168, 14, 14);
+	text-shadow: 1px 1px 5px rgb(168, 14, 14);
+}
