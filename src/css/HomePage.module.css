@@ -1,0 +1,55 @@
+.hpContainer {
+	display: flex;
+}
+
+.hpContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	flex: 1;
+	padding: 0 2em;
+	background-color: rgb(240, 234, 226);
+}
+
+.hpImg {
+	width: 50vw;
+}
+
+.hpTitle {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.hpShopBtn {
+	font-size: 1.5em;
+	font-weight: 800;
+	letter-spacing: 1px;
+	padding: 0.75em 2em;
+	color: black;
+	background-color: rgb(168, 14, 14);
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+.hpShopBtn:hover {
+	color: white;
+	text-shadow: 1px 1px 5px white;
+}
+
+.hpInput {
+	font-size: 1.2em;
+	padding: 0.5em;
+}
+
+.hpSubscribeBtn {
+	font-size: 1.2em;
+	padding: 0.5em;
+	color: white;
+	background-color: rgb(168, 14, 14);
+	border: 2px solid rgb(168, 14, 14);
+	transition: 0.2s;
+}
+
+.hpSubscribeBtn:hover {
+	cursor: pointer;
+}
