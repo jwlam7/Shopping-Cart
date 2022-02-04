@@ -21,6 +21,10 @@ a {
 	font-weight: 500;
 }
 
+.navShop:hover {
+	font-weight: 600;
+}
+
 .navBrand {
 	font-size: 2em;
 	letter-spacing: 4px;
@@ -31,4 +35,15 @@ a {
 	font-size: 2em;
 	color: rgb(168, 14, 14);
 	text-shadow: 1px 1px 5px rgb(168, 14, 14);
+}
+
+/* ------------------------------------------------ */
+
+@media (max-width: 400px) {
+	.navBrand {
+		letter-spacing: 1px;
+	}
+	.navCart {
+		font-size: 1.5em;
+	}
 }

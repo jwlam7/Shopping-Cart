@@ -53,3 +53,32 @@
 .hpSubscribeBtn:hover {
 	cursor: pointer;
 }
+
+/* ------------------------------------------------ */
+
+@media (max-width: 975px) {
+	.hpTitle {
+		font-size: 2.5em;
+	}
+}
+
+@media (max-width: 850px) {
+	.hpContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+	.hpContent {
+		gap: 5em;
+		align-items: center;
+		text-align: center;
+	}
+	.hpSubscribeBtn {
+		margin-bottom: 1em;
+	}
+}
+
+@media (max-width: 400px) {
+	.hpSubscribeBtn {
+		margin-top: 1em;
+	}
+}
