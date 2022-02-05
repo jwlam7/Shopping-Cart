@@ -6,7 +6,7 @@
 	background-color: black;
 }
 
-a {
+.nav a {
 	text-decoration: none;
 }
 
@@ -14,6 +14,7 @@ a {
 .navBrand {
 	color: white;
 	text-shadow: 1px 1px 5px white;
+	padding: 1em 0em;
 }
 
 .navShop {
@@ -33,6 +34,7 @@ a {
 
 .navCart {
 	font-size: 2em;
+	padding: 1em 0em;
 	color: rgb(168, 14, 14);
 	text-shadow: 1px 1px 5px rgb(168, 14, 14);
 }

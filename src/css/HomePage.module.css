@@ -1,8 +1,12 @@
-.hpContainer {
+.homePageContainer {
 	display: flex;
 }
 
-.hpContent {
+.homePageImg {
+	width: 50vw;
+}
+
+.homePageContent {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -11,16 +15,12 @@
 	background-color: rgb(240, 234, 226);
 }
 
-.hpImg {
-	width: 50vw;
-}
-
-.hpTitle {
+.homePageTitle {
 	font-size: 3em;
 	font-weight: bold;
 }
 
-.hpShopBtn {
+.homePageShopBtn {
 	font-size: 1.5em;
 	font-weight: 800;
 	letter-spacing: 1px;
@@ -31,17 +31,17 @@
 	transition: 0.2s;
 }
 
-.hpShopBtn:hover {
+.homePageShopBtn:hover {
 	color: white;
 	text-shadow: 1px 1px 5px white;
 }
 
-.hpInput {
+.homePageEmailInput {
 	font-size: 1.2em;
 	padding: 0.5em;
 }
 
-.hpSubscribeBtn {
+.homePageSubscribeBtn {
 	font-size: 1.2em;
 	padding: 0.5em;
 	color: white;
@@ -50,35 +50,35 @@
 	transition: 0.2s;
 }
 
-.hpSubscribeBtn:hover {
+.homePageSubscribeBtn:hover {
 	cursor: pointer;
 }
 
 /* ------------------------------------------------ */
 
 @media (max-width: 975px) {
-	.hpTitle {
+	.homePageTitle {
 		font-size: 2.5em;
 	}
 }
 
 @media (max-width: 850px) {
-	.hpContainer {
+	.homePageContainer {
 		flex-direction: column;
 		align-items: center;
 	}
-	.hpContent {
+	.homePageContent {
 		gap: 5em;
 		align-items: center;
 		text-align: center;
 	}
-	.hpSubscribeBtn {
+	.homePageSubscribeBtn {
 		margin-bottom: 1em;
 	}
 }
 
 @media (max-width: 400px) {
-	.hpSubscribeBtn {
+	.homePageSubscribeBtn {
 		margin-top: 1em;
 	}
 }
