@@ -1,0 +1,18 @@
+.productPageContainer {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 2em;
+}
+
+.productPageCategories {
+	width: 20vw;
+	padding-left: 2em;
+}
+
+.productPageLinks {
+	margin-top: 1em;
+}
+
+.productPageItem {
+	width: 60vw;
+}
