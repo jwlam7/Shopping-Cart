@@ -1,0 +1,32 @@
+.itemImgCover,
+.itemImgContain {
+	width: 300px;
+	height: 300px;
+}
+
+.itemImgCover {
+	object-fit: cover;
+}
+
+.itemImgContain {
+	object-fit: contain;
+}
+
+.itemDetails {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.itemDetails button {
+	font-size: 1.2em;
+	padding: 0.8em;
+	border: none;
+	color: white;
+	background-color: rgb(48, 96, 230);
+}
+
+.itemDetails button:hover {
+	cursor: pointer;
+	background-color: rgb(23, 63, 148);
+}

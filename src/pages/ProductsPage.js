@@ -1,4 +1,5 @@
 import React from 'react';
+import Item from '../components/Item';
 import allProducts from '../data/allProducts';
 import styles from '../css/ProductsPage.module.css';
 
@@ -19,7 +20,9 @@ function ProductsPage() {
 				</div>
 			</div>
 
-			<div className={styles.productPageItem}>{allProducts.map((item) => <p>image goes here</p>)}</div>
+			<div className={styles.productPageItem}>
+				{allProducts.map((item) => <Item key={item.id} product={item} />)}
+			</div>
 		</div>
 	);
 }
