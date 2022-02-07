@@ -13,6 +13,31 @@
 	margin-top: 1em;
 }
 
+.productsPageLinks h1,
+.productsPageLinks h2 {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 1em;
+	color: black;
+}
+
+.productsPageLinks h1:before,
+.productsPageLinks h2:before {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: -4px;
+	width: 0;
+	height: 2px;
+	background-color: rgb(23, 63, 148);
+	transition: 0.2s ease-in-out;
+}
+
+.productsPageLinks h1:hover:before,
+.productsPageLinks h2:hover::before {
+	width: 100%;
+}
+
 .productsPageItem {
 	display: flex;
 	justify-content: space-around;
