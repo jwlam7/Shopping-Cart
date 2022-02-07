@@ -5,11 +5,11 @@ import styles from '../css/ProductsPage.module.css';
 
 function ProductsPage() {
 	return (
-		<div className={styles.productPageContainer}>
-			<div className={styles.productPageCategories}>
+		<div className={styles.productsPageContainer}>
+			<div className={styles.productsPageCategories}>
 				<h1>ALL PRODUCTS</h1>
 				<hr />
-				<div className={styles.productPageLinks}>
+				<div className={styles.productsPageLinks}>
 					<h1>Percussion</h1>
 					<h1>Vibration</h1>
 					<h1>Taping</h1>
@@ -20,7 +20,7 @@ function ProductsPage() {
 				</div>
 			</div>
 
-			<div className={styles.productPageItem}>
+			<div className={styles.productsPageItem}>
 				{allProducts.map((item) => <Item key={item.id} product={item} />)}
 			</div>
 		</div>

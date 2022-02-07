@@ -30,3 +30,15 @@
 	cursor: pointer;
 	background-color: rgb(23, 63, 148);
 }
+
+/* ------------------------------------------------ */
+
+@media (max-width: 630px) {
+	.itemDetails {
+		flex-direction: column;
+	}
+	.itemDetails button {
+		font-size: 1em;
+		margin: -1em 0 1em 0;
+	}
+}
