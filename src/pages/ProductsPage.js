@@ -1,41 +1,64 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Item from '../components/Item';
 import allProducts from '../data/allProducts';
 import styles from '../css/ProductsPage.module.css';
 
 function ProductsPage() {
+	const initialTitle = 'ALL PRODUCTS';
+	const [ category, setCategory ] = useState(initialTitle);
+
+	const updateCategory = (e) => {
+		const isShopAll = e.target.className.includes('shop-all');
+		isShopAll ? setCategory(initialTitle) : setCategory(e.target.innerText);
+	};
+
+	const displayCategory = () => {
+		const display =
+			category === 'ALL PRODUCTS'
+				? allProducts.map((item) => {
+						return <Item key={item.id} product={item} />;
+					})
+				: allProducts.filter((item) => item.category === category).map((filteredItem) => {
+						return <Item key={filteredItem.id} product={filteredItem} />;
+					});
+
+		return display;
+	};
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<div className={styles.productsPageContainer}>
 			<div className={styles.productsPageCategories}>
-				<h1>ALL PRODUCTS</h1>
+				<h1>{category}</h1>
 				<hr />
 				<div className={styles.productsPageLinks}>
-					<Link to={'/products'}>
+					<Link to={'/products'} onClick={updateCategory}>
 						<h1>Percussion</h1>
 						<br />
 					</Link>
-					<Link to={'/products'}>
+					<Link to={'/products'} onClick={updateCategory}>
 						<h1>Vibration</h1>
 						<br />
 					</Link>
-					<Link to={'/products'}>
+					<Link to={'/products'} onClick={updateCategory}>
 						<h1>Taping</h1>
 						<br />
 					</Link>
-					<Link to={'/products'}>
-						<h2>
+					<Link to={'/products'} onClick={updateCategory}>
+						<h2 className="shop-all">
 							Shop All{'  '}
-							<i className="fas fa-long-arrow-alt-right" />
+							<i className="fas fa-long-arrow-alt-right shop-all" />
 						</h2>
 						<br />
 					</Link>
 				</div>
 			</div>
 
-			<div className={styles.productsPageItem}>
-				{allProducts.map((item) => <Item key={item.id} product={item} />)}
-			</div>
+			<div className={styles.productsPageItem}>{displayCategory()}</div>
 		</div>
 	);
 }
