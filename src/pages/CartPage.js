@@ -9,7 +9,12 @@ function CartPage(props) {
 	const btnStyles = isCartEmpty ? styles.cartPageCheckoutBtnEmpty : styles.cartPageCheckoutBtnFull;
 
 	const displayCart = () => {
-		const display = isCartEmpty ? (
+		const display = isCartEmpty ? showEmptyCart() : showFullCart();
+		return display;
+	};
+
+	const showEmptyCart = () => {
+		return (
 			<div className={styles.cartPageCartEmpty}>
 				<h1>Your cart is empty. Let's change that.</h1>
 				<Link to={'/products'} className={styles.cartPageShopBtn}>
@@ -17,7 +22,11 @@ function CartPage(props) {
 					<i className="fas fa-long-arrow-alt-right" />
 				</Link>
 			</div>
-		) : (
+		);
+	};
+
+	const showFullCart = () => {
+		return (
 			<div className={styles.cartPageCartFull}>
 				<h1>
 					Your Cart ({cart.length} item{cart.length > 1 ? 's' : ''})
@@ -32,8 +41,6 @@ function CartPage(props) {
 				{cart.map((item) => <CartItem key={item.id} product={item} {...props} />)}
 			</div>
 		);
-
-		return display;
 	};
 
 	return (

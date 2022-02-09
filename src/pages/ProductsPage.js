@@ -14,16 +14,20 @@ function ProductsPage(props) {
 	};
 
 	const displayCategory = () => {
-		const display =
-			category === 'ALL PRODUCTS'
-				? allProducts.map((item) => {
-						return <Item key={item.id} product={item} {...props} />;
-					})
-				: allProducts.filter((item) => item.category === category).map((filteredItem) => {
-						return <Item key={filteredItem.id} product={filteredItem} {...props} />;
-					});
-
+		const display = category === 'ALL PRODUCTS' ? getAllProducts() : getFilteredProducts();
 		return display;
+	};
+
+	const getAllProducts = () => {
+		return allProducts.map((item) => {
+			return <Item key={item.id} product={item} {...props} />;
+		});
+	};
+
+	const getFilteredProducts = () => {
+		return allProducts.filter((item) => item.category === category).map((filteredItem) => {
+			return <Item key={filteredItem.id} product={filteredItem} {...props} />;
+		});
 	};
 
 	useEffect(() => {
