@@ -1,7 +1,7 @@
 .cartItemContainer {
 	display: flex;
 	justify-content: space-between;
-	gap: 4em;
+	gap: 8em;
 }
 
 .cartItemProduct {
@@ -54,6 +54,14 @@
 	font-weight: 600;
 }
 
+.cartItemPrice button {
+	padding: 0.5em;
+}
+
+.cartItemPrice button:hover {
+	cursor: pointer;
+}
+
 hr {
 	margin-top: 1em;
 }
@@ -63,6 +71,12 @@ hr {
 }
 
 /* ------------------------------------------------ */
+
+@media (max-width: 1175px) {
+	.cartItemContainer {
+		gap: 4em;
+	}
+}
 
 @media (max-width: 450px) {
 	.visibleContainer {

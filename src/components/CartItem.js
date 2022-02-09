@@ -2,8 +2,15 @@ import React, { Fragment } from 'react';
 import styles from '../css/CartItem.module.css';
 
 function CartItem(props) {
-	const { name, price, src, alt } = props.product;
+	const { cart, setCart } = props;
+	const { id, name, price, src, alt } = props.product;
 	const imgStyles = name.includes('KT Tape') ? styles.cartItemImgContain : styles.cartItemImgCover;
+
+	const removeFromCart = (e) => {
+		const productId = Number(e.target.getAttribute('data-productid'));
+		const productList = cart.filter((item) => item.id !== productId);
+		setCart([ ...productList ]);
+	};
 
 	const quantity = () => {
 		return (
@@ -34,7 +41,9 @@ function CartItem(props) {
 
 				<div className={styles.cartItemPrice}>
 					<span>${price}</span>
-					<button>Remove</button>
+					<button onClick={removeFromCart} data-productid={id}>
+						Remove
+					</button>
 				</div>
 			</div>
 
