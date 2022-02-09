@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import allProducts from '../data/allProducts';
 import styles from '../css/Item.module.css';
 
