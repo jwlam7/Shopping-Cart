@@ -3,7 +3,7 @@
 	justify-content: space-around;
 	align-items: center;
 	background-color: rgb(240, 234, 226);
-	height: 85vh;
+	min-height: 85vh;
 }
 
 .cartPageItem {
@@ -44,6 +44,7 @@
 	letter-spacing: 1px;
 }
 
+.cartPageCheckoutBtnEmpty,
 .cartPageCheckoutBtn {
 	width: 100%;
 	letter-spacing: 3px;
@@ -51,11 +52,24 @@
 	margin: 2em 0 1em;
 	padding: 1em 4em;
 	border: none;
+}
+
+.cartPageCheckoutBtnEmpty {
 	background-color: rgb(240, 234, 226);
 }
 
-.cartPageCheckoutBtn:hover {
+.cartPageCheckoutBtnEmpty:hover,
+.cartPageCheckoutBtn {
 	cursor: pointer;
+}
+
+.cartPageCheckoutBtn {
+	color: white;
+	background-color: rgb(48, 96, 230);
+}
+
+.cartPageCheckoutBtn:hover {
+	background-color: rgb(23, 63, 148);
 }
 
 /* ------------------------------------------------ */

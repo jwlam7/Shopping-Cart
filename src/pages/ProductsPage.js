@@ -4,7 +4,7 @@ import Item from '../components/Item';
 import allProducts from '../data/allProducts';
 import styles from '../css/ProductsPage.module.css';
 
-function ProductsPage() {
+function ProductsPage(props) {
 	const initialTitle = 'ALL PRODUCTS';
 	const [ category, setCategory ] = useState(initialTitle);
 
@@ -17,10 +17,10 @@ function ProductsPage() {
 		const display =
 			category === 'ALL PRODUCTS'
 				? allProducts.map((item) => {
-						return <Item key={item.id} product={item} />;
+						return <Item key={item.id} product={item} {...props} />;
 					})
 				: allProducts.filter((item) => item.category === category).map((filteredItem) => {
-						return <Item key={filteredItem.id} product={filteredItem} />;
+						return <Item key={filteredItem.id} product={filteredItem} {...props} />;
 					});
 
 		return display;
