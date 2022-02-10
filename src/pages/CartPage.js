@@ -4,7 +4,7 @@ import CartItem from '../components/CartItem';
 import styles from '../css/CartPage.module.css';
 
 function CartPage(props) {
-	const { cart } = props;
+	const { cart, subtotal } = props;
 	const isCartEmpty = cart.length === 0 ? true : false;
 	const btnStyles = isCartEmpty ? styles.cartPageCheckoutBtnEmpty : styles.cartPageCheckoutBtnFull;
 
@@ -45,23 +45,20 @@ function CartPage(props) {
 
 	return (
 		<div>
-			<div className={styles.cartPageContainer}>
+			<div className={styles.cartPageContainer} id="container">
 				{displayCart()}
 
 				<div className={styles.cartPageCheckout}>
 					<div className={styles.cartPageSubtotal}>
 						<p>Subtotal</p>
-						<div>$0.00</div>
+						<div>${subtotal.toFixed(2)}</div>
 					</div>
-
 					<div>
 						<hr />
 					</div>
-
 					<div>
 						<button className={btnStyles}>CHECKOUT</button>
 					</div>
-
 					<div>
 						<small>Tax and shipping are calculated at checkout.</small>
 					</div>

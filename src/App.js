@@ -8,8 +8,8 @@ import ProductsPage from './pages/ProductsPage';
 import CartPage from './pages/CartPage';
 
 function App() {
-	const initialCart = [];
-	const [ cart, setCart ] = useState(initialCart);
+	const [ cart, setCart ] = useState([]);
+	const [ subtotal, setSubtotal ] = useState(0);
 
 	return (
 		<Router>
@@ -17,8 +17,18 @@ function App() {
 				<Header />
 				<Routes>
 					<Route path="/" element={<HomePage />} />
-					<Route path="/products" element={<ProductsPage cart={cart} setCart={setCart} />} />
-					<Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
+					<Route
+						path="/products"
+						element={
+							<ProductsPage cart={cart} setCart={setCart} subtotal={subtotal} setSubtotal={setSubtotal} />
+						}
+					/>
+					<Route
+						path="/cart"
+						element={
+							<CartPage cart={cart} setCart={setCart} subtotal={subtotal} setSubtotal={setSubtotal} />
+						}
+					/>
 				</Routes>
 			</div>
 		</Router>

@@ -11,13 +11,11 @@ function Header() {
 						Shop
 					</NavLink>
 				</div>
-
 				<div>
 					<NavLink to={'/'} className={styles.navBrand}>
 						REJUVENATE
 					</NavLink>
 				</div>
-
 				<div>
 					<NavLink to={'/cart'} className={styles.navCart}>
 						<i className="fas fa-shopping-cart" />

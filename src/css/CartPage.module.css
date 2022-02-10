@@ -36,7 +36,8 @@
 .cartPageCheckout {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 2em;
+	align-self: start;
+	margin: 12em 0 2em;
 	padding: 1em 2em 2em;
 	background-color: white;
 	border-radius: 5px;
@@ -98,6 +99,10 @@
 	.cartPageContainer {
 		flex-direction: column;
 		gap: 2em;
+	}
+	.cartPageCheckout {
+		align-self: center;
+		margin: 4em 0 2em;
 	}
 	.cartPageCartEmpty {
 		text-align: center;
