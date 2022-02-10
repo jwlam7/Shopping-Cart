@@ -7,17 +7,17 @@ function Header() {
 		<div>
 			<div className={styles.nav}>
 				<div>
-					<NavLink to={'/products'} className={styles.navShop}>
+					<NavLink to={'/Shopping-Cart/products'} className={styles.navShop}>
 						Shop
 					</NavLink>
 				</div>
 				<div>
-					<NavLink to={'/'} className={styles.navBrand}>
+					<NavLink to={'/Shopping-Cart/'} className={styles.navBrand}>
 						REJUVENATE
 					</NavLink>
 				</div>
 				<div>
-					<NavLink to={'/cart'} className={styles.navCart}>
+					<NavLink to={'/Shopping-Cart/cart'} className={styles.navCart}>
 						<i className="fas fa-shopping-cart" />
 					</NavLink>
 				</div>

@@ -40,19 +40,19 @@ function ProductsPage(props) {
 				<h1>{category}</h1>
 				<hr />
 				<div className={styles.productsPageLinks}>
-					<Link to={'/products'} onClick={updateCategory}>
+					<Link to={'/Shopping-Cart/products'} onClick={updateCategory}>
 						<h1>Percussion</h1>
 						<br />
 					</Link>
-					<Link to={'/products'} onClick={updateCategory}>
+					<Link to={'/Shopping-Cart/products'} onClick={updateCategory}>
 						<h1>Vibration</h1>
 						<br />
 					</Link>
-					<Link to={'/products'} onClick={updateCategory}>
+					<Link to={'/Shopping-Cart/products'} onClick={updateCategory}>
 						<h1>Taping</h1>
 						<br />
 					</Link>
-					<Link to={'/products'} onClick={updateCategory}>
+					<Link to={'/Shopping-Cart/products'} onClick={updateCategory}>
 						<h2 className="shop-all">
 							Shop All{'  '}
 							<i className="fas fa-long-arrow-alt-right shop-all" />

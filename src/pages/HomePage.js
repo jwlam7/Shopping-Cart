@@ -15,7 +15,7 @@ function HomePage() {
 					<h2>Recover faster with our range of innovative products</h2>
 				</div>
 				<div>
-					<Link to={'/products'} className={styles.homePageShopBtn}>
+					<Link to={'/Shopping-Cart/products'} className={styles.homePageShopBtn}>
 						SHOP NOW
 					</Link>
 				</div>

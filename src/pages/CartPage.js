@@ -17,7 +17,7 @@ function CartPage(props) {
 		return (
 			<div className={styles.cartPageCartEmpty}>
 				<h1>Your cart is empty. Let's change that.</h1>
-				<Link to={'/products'} className={styles.cartPageShopBtn}>
+				<Link to={'/Shopping-Cart/products'} className={styles.cartPageShopBtn}>
 					SHOP NOW{'  '}
 					<i className="fas fa-long-arrow-alt-right" />
 				</Link>

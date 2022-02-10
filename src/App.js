@@ -16,15 +16,15 @@ function App() {
 			<div>
 				<Header />
 				<Routes>
-					<Route path="/" element={<HomePage />} />
+					<Route path="/Shopping-Cart" element={<HomePage />} />
 					<Route
-						path="/products"
+						path="/Shopping-Cart/products"
 						element={
 							<ProductsPage cart={cart} setCart={setCart} subtotal={subtotal} setSubtotal={setSubtotal} />
 						}
 					/>
 					<Route
-						path="/cart"
+						path="/Shopping-Cart/cart"
 						element={
 							<CartPage cart={cart} setCart={setCart} subtotal={subtotal} setSubtotal={setSubtotal} />
 						}
