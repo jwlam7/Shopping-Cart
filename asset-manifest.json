@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Shopping-Cart/static/css/main.536e5476.css",
-    "main.js": "/Shopping-Cart/static/js/main.67efecd8.js",
+    "main.js": "/Shopping-Cart/static/js/main.043cfbe3.js",
     "static/js/787.d6fe38e8.chunk.js": "/Shopping-Cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/wave-roller.jpg": "/Shopping-Cart/static/media/wave-roller.da4a3f4d061cf8902e8c.jpg",
     "static/media/rocktape.jpg": "/Shopping-Cart/static/media/rocktape.2ffd8f20ba1de7195822.jpg",
@@ -17,11 +17,11 @@
     "static/media/hypervolt-2-pro.jpg": "/Shopping-Cart/static/media/hypervolt-2-pro.e4357fca5fbf91165b02.jpg",
     "index.html": "/Shopping-Cart/index.html",
     "main.536e5476.css.map": "/Shopping-Cart/static/css/main.536e5476.css.map",
-    "main.67efecd8.js.map": "/Shopping-Cart/static/js/main.67efecd8.js.map",
+    "main.043cfbe3.js.map": "/Shopping-Cart/static/js/main.043cfbe3.js.map",
     "787.d6fe38e8.chunk.js.map": "/Shopping-Cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.536e5476.css",
-    "static/js/main.67efecd8.js"
+    "static/js/main.043cfbe3.js"
   ]
 }
