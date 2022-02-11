@@ -3,7 +3,7 @@ import allProducts from '../data/allProducts';
 import styles from '../css/Item.module.css';
 
 function Item(props) {
-	const { cart, setCart, subtotal, setSubtotal } = props;
+	const { cart, setCart, quantity, setQuantity } = props;
 	const { id, name, price, src, alt } = props.product;
 	const imgStyles = name.includes('KT Tape') ? styles.itemImgContain : styles.itemImgCover;
 
@@ -13,16 +13,12 @@ function Item(props) {
 		if (!isProductInCart(productId)) {
 			const product = allProducts.find((item) => item.id === productId);
 			setCart([ ...cart, product ]);
-			calculateSubtotal(product);
+			setQuantity({ ...quantity, [id]: 1 });
 		}
 	};
 
 	const isProductInCart = (id) => {
 		return !!cart.find((item) => item.id === id);
-	};
-
-	const calculateSubtotal = (product) => {
-		setSubtotal((prevState) => prevState + product.price);
 	};
 
 	return (

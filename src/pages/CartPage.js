@@ -4,7 +4,7 @@ import CartItem from '../components/CartItem';
 import styles from '../css/CartPage.module.css';
 
 function CartPage(props) {
-	const { cart, subtotal } = props;
+	const { cart, quantity } = props;
 	const isCartEmpty = cart.length === 0 ? true : false;
 	const btnStyles = isCartEmpty ? styles.cartPageCheckoutBtnEmpty : styles.cartPageCheckoutBtnFull;
 
@@ -43,6 +43,12 @@ function CartPage(props) {
 		);
 	};
 
+	const displaySubtotal = () => {
+		const sumArr = cart.map((item) => item.price * quantity[item.id]);
+		const sum = sumArr.reduce((prev, next) => prev + next);
+		return sum.toFixed(2);
+	};
+
 	return (
 		<div>
 			<div className={styles.cartPageContainer} id="container">
@@ -51,7 +57,7 @@ function CartPage(props) {
 				<div className={styles.cartPageCheckout}>
 					<div className={styles.cartPageSubtotal}>
 						<p>Subtotal</p>
-						<div>${subtotal.toFixed(2)}</div>
+						<div>${isCartEmpty ? '0.00' : displaySubtotal()}</div>
 					</div>
 					<div>
 						<hr />

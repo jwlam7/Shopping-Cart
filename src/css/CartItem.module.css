@@ -30,6 +30,10 @@
 	background-color: white;
 }
 
+.cartItemQuantity button > * {
+	pointer-events: none;
+}
+
 .cartItemQuantity button {
 	border: none;
 	background-color: white;

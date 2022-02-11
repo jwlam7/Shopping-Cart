@@ -2,30 +2,36 @@ import React, { Fragment } from 'react';
 import styles from '../css/CartItem.module.css';
 
 function CartItem(props) {
-	const { cart, setCart, subtotal, setSubtotal } = props;
+	const { cart, setCart, quantity, setQuantity } = props;
 	const { id, name, price, src, alt } = props.product;
 	const imgStyles = name.includes('KT Tape') ? styles.cartItemImgContain : styles.cartItemImgCover;
 
 	const removeFromCart = (e) => {
 		const productId = Number(e.target.getAttribute('data-productid'));
-		const product = cart.find((item) => item.id === productId);
 		const productList = cart.filter((item) => item.id !== productId);
 		setCart([ ...productList ]);
-		calculateSubtotal(product);
 	};
 
-	const calculateSubtotal = (product) => {
-		setSubtotal((prevState) => prevState - product.price);
+	const decrementQuantity = (e) => {
+		const productId = Number(e.target.getAttribute('data-productid'));
+		const currQuantity = quantity[id];
+		if (currQuantity > 1) setQuantity({ ...quantity, [productId]: currQuantity - 1 });
 	};
 
-	const quantity = () => {
+	const incrementQuantity = (e) => {
+		const productId = Number(e.target.getAttribute('data-productid'));
+		const currQuantity = quantity[id];
+		if (currQuantity < 10) setQuantity({ ...quantity, [productId]: currQuantity + 1 });
+	};
+
+	const quantitySection = () => {
 		return (
 			<div className={styles.cartItemQuantity}>
-				<button>
+				<button onClick={decrementQuantity} data-productid={id}>
 					<i className="fa-solid fa-minus" />
 				</button>
-				<input value={1} readOnly />
-				<button>
+				<input value={quantity[id]} readOnly />
+				<button onClick={incrementQuantity} data-productid={id}>
 					<i className="fa-solid fa-plus" />
 				</button>
 			</div>
@@ -39,14 +45,14 @@ function CartItem(props) {
 					<img src={src} alt={alt} className={imgStyles} />
 					<span>
 						<span>{name}</span>
-						<div className={styles.hiddenContainer}>{quantity()}</div>
+						<div className={styles.hiddenContainer}>{quantitySection()}</div>
 					</span>
 				</div>
 
-				<div className={styles.visibleContainer}>{quantity()}</div>
+				<div className={styles.visibleContainer}>{quantitySection()}</div>
 
 				<div className={styles.cartItemPrice}>
-					<span>${price}</span>
+					<span>${price * quantity[id]}</span>
 					<button onClick={removeFromCart} data-productid={id}>
 						Remove
 					</button>

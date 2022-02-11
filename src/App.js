@@ -9,7 +9,7 @@ import CartPage from './pages/CartPage';
 
 function App() {
 	const [ cart, setCart ] = useState([]);
-	const [ subtotal, setSubtotal ] = useState(0);
+	const [ quantity, setQuantity ] = useState({});
 
 	return (
 		<Router>
@@ -20,13 +20,13 @@ function App() {
 					<Route
 						path="/Shopping-Cart/products"
 						element={
-							<ProductsPage cart={cart} setCart={setCart} subtotal={subtotal} setSubtotal={setSubtotal} />
+							<ProductsPage cart={cart} setCart={setCart} quantity={quantity} setQuantity={setQuantity} />
 						}
 					/>
 					<Route
 						path="/Shopping-Cart/cart"
 						element={
-							<CartPage cart={cart} setCart={setCart} subtotal={subtotal} setSubtotal={setSubtotal} />
+							<CartPage cart={cart} setCart={setCart} quantity={quantity} setQuantity={setQuantity} />
 						}
 					/>
 				</Routes>
