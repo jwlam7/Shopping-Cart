@@ -1,5 +1,7 @@
 import React from 'react';
+//Routing
 import { Link } from 'react-router-dom';
+//Styles
 import styles from '../css/HomePage.module.css';
 
 function HomePage() {
@@ -25,9 +27,9 @@ function HomePage() {
 				<div>
 					<h2>Join the Fam!</h2>
 					<h3>Sign up for the latest news / exclusive offers</h3>
-					<form>
-						<input className={styles.homePageEmailInput} type="text" placeholder="Email Address" />
-						<button className={styles.homePageSubscribeBtn} type="submit">
+					<form className={styles.homePageForm}>
+						<input className={styles.homePageEmailInput} type='text' placeholder='Email Address' />
+						<button className={styles.homePageSubscribeBtn} type='submit'>
 							Subscribe
 						</button>
 					</form>

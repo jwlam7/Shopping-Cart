@@ -48,9 +48,6 @@
 	background-color: rgb(168, 14, 14);
 	border: 2px solid rgb(168, 14, 14);
 	transition: 0.2s;
-}
-
-.homePageSubscribeBtn:hover {
 	cursor: pointer;
 }
 
@@ -72,13 +69,20 @@
 		align-items: center;
 		text-align: center;
 	}
-	.homePageSubscribeBtn {
-		margin-bottom: 1em;
+	.homePageForm {
+		margin: 2em auto;
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
+	.homePageForm {
+		width: 90%;
+		font-size: 0.75em;
+	}
+	.homePageEmailInput {
+		width: 50%;
+	}
 	.homePageSubscribeBtn {
-		margin-top: 1em;
+		width: 30%;
 	}
 }
