@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+//Routing
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-//pages
+//Pages
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
@@ -16,15 +17,15 @@ function App() {
 			<div>
 				<Header />
 				<Routes>
-					<Route path="/Shopping-Cart" element={<HomePage />} />
+					<Route path='/Shopping-Cart' element={<HomePage />} />
 					<Route
-						path="/Shopping-Cart/products"
+						path='/Shopping-Cart/products'
 						element={
 							<ProductsPage cart={cart} setCart={setCart} quantity={quantity} setQuantity={setQuantity} />
 						}
 					/>
 					<Route
-						path="/Shopping-Cart/cart"
+						path='/Shopping-Cart/cart'
 						element={
 							<CartPage cart={cart} setCart={setCart} quantity={quantity} setQuantity={setQuantity} />
 						}

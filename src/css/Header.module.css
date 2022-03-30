@@ -26,6 +26,20 @@
 	font-weight: 600;
 }
 
+.navToggle {
+	display: none;
+	font-size: 1.5em;
+	color: white;
+	background: transparent;
+	border: transparent;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.navToggle:hover {
+	transform: rotateY(180deg);
+}
+
 .navBrand {
 	font-size: 2em;
 	letter-spacing: 4px;
@@ -40,6 +54,15 @@
 }
 
 /* ------------------------------------------------ */
+
+@media (max-width: 850px) {
+	.navShop {
+		display: none;
+	}
+	.navToggle {
+		display: inline;
+	}
+}
 
 @media (max-width: 400px) {
 	.navBrand {
