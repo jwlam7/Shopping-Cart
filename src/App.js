@@ -11,17 +11,25 @@ import CartPage from './pages/CartPage';
 function App() {
 	const [ cart, setCart ] = useState([]);
 	const [ quantity, setQuantity ] = useState({});
+	const [ category, setCategory ] = useState('ALL PRODUCTS');
 
 	return (
 		<Router>
 			<div>
-				<Header />
+				<Header setCategory={setCategory} />
 				<Routes>
 					<Route path='/Shopping-Cart' element={<HomePage />} />
 					<Route
 						path='/Shopping-Cart/products'
 						element={
-							<ProductsPage cart={cart} setCart={setCart} quantity={quantity} setQuantity={setQuantity} />
+							<ProductsPage
+								cart={cart}
+								setCart={setCart}
+								quantity={quantity}
+								setQuantity={setQuantity}
+								category={category}
+								setCategory={setCategory}
+							/>
 						}
 					/>
 					<Route

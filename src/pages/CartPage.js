@@ -19,7 +19,7 @@ function CartPage(props) {
 				<h1>Your cart is empty. Let's change that.</h1>
 				<Link to={'/Shopping-Cart/products'} className={styles.cartPageShopBtn}>
 					SHOP NOW{'  '}
-					<i className="fas fa-long-arrow-alt-right" />
+					<i className='fas fa-long-arrow-alt-right' />
 				</Link>
 			</div>
 		);
@@ -51,7 +51,7 @@ function CartPage(props) {
 
 	return (
 		<div>
-			<div className={styles.cartPageContainer} id="container">
+			<div className={styles.cartPageContainer} id='container'>
 				{displayCart()}
 
 				<div className={styles.cartPageCheckout}>

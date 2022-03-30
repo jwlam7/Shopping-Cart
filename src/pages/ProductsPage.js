@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Item from '../components/Item';
 import allProducts from '../data/allProducts';
 import styles from '../css/ProductsPage.module.css';
 
 function ProductsPage(props) {
-	const initialTitle = 'ALL PRODUCTS';
-	const [ category, setCategory ] = useState(initialTitle);
+	const { category, setCategory } = props;
 
 	const updateCategory = (e) => {
 		const isShopAll = e.target.className.includes('shop-all');
-		isShopAll ? setCategory(initialTitle) : setCategory(e.target.innerText);
+		isShopAll ? setCategory('ALL PRODUCTS') : setCategory(e.target.innerText);
 	};
 
 	const displayCategory = () => {
@@ -53,9 +52,9 @@ function ProductsPage(props) {
 						<br />
 					</Link>
 					<Link to={'/Shopping-Cart/products'} onClick={updateCategory}>
-						<h2 className="shop-all">
+						<h2 className='shop-all'>
 							Shop All{'  '}
-							<i className="fas fa-long-arrow-alt-right shop-all" />
+							<i className='fas fa-long-arrow-alt-right shop-all' />
 						</h2>
 						<br />
 					</Link>

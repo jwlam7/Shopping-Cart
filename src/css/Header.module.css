@@ -32,12 +32,12 @@
 	color: white;
 	background: transparent;
 	border: transparent;
-	transition: 0.5s;
+	transition: 0.5s ease-in-out;
 	cursor: pointer;
 }
 
 .navToggle:hover {
-	transform: rotateY(180deg);
+	transform: rotate(45deg);
 }
 
 .navBrand {
@@ -53,6 +53,35 @@
 	text-shadow: 1px 1px 5px rgb(168, 14, 14);
 }
 
+.navLinksContainer {
+	height: 0;
+	background-color: black;
+	transition: 0.5s ease-in-out;
+	/* use of overflow:hidden to prevent links from showing up on all pages */
+	overflow: hidden;
+}
+
+.navLinks {
+	margin: 0;
+	list-style: none;
+}
+
+.navLinks a {
+	display: block;
+	padding: 0.5em 1em;
+	font-size: 1em;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: white;
+	transition: 0.4s ease-in-out;
+}
+
+.navLinks a:hover {
+	margin-left: 1.5em;
+	background-color: rgba(51, 47, 47, 0.7);
+	border-radius: 4px;
+}
+
 /* ------------------------------------------------ */
 
 @media (max-width: 850px) {
@@ -61,6 +90,12 @@
 	}
 	.navToggle {
 		display: inline;
+	}
+}
+
+@media (min-width: 850px) {
+	.navLinksContainer {
+		height: 0 !important;
 	}
 }
 

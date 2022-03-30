@@ -8,7 +8,7 @@ function HomePage() {
 	return (
 		<div className={styles.homePageContainer}>
 			<div>
-				<img src={require('../images/kt-tapeman.jpg')} className={styles.homePageImg} />
+				<img src={require('../images/kt-tapeman.jpg')} alt='kt-tapeman' className={styles.homePageImg} />
 			</div>
 
 			<div className={styles.homePageContent}>
