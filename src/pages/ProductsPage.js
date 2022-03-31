@@ -1,15 +1,21 @@
 import React, { useEffect } from 'react';
+//Routing
 import { Link } from 'react-router-dom';
-import Item from '../components/Item';
-import allProducts from '../data/allProducts';
+//Styles
 import styles from '../css/ProductsPage.module.css';
+//Components
+import Item from '../components/Item';
+//Data
+import allProducts from '../data/allProducts';
+//Custom hook for context
+import { useGlobalContext } from '../context/context';
 
-function ProductsPage(props) {
-	const { category, setCategory } = props;
+function ProductsPage() {
+	const { category, setCategory } = useGlobalContext();
 
 	const updateCategory = (e) => {
 		const isShopAll = e.target.className.includes('shop-all');
-		isShopAll ? setCategory('ALL PRODUCTS') : setCategory(e.target.innerText);
+		isShopAll ? setCategory('ALL PRODUCTS') : setCategory(e.target.innerHTML);
 	};
 
 	const displayCategory = () => {
@@ -19,13 +25,15 @@ function ProductsPage(props) {
 
 	const getAllProducts = () => {
 		return allProducts.map((item) => {
-			return <Item key={item.id} product={item} {...props} />;
+			return console.log(item);
+			// return <Item key={item.id} product={item} {...props} />;
 		});
 	};
 
 	const getFilteredProducts = () => {
 		return allProducts.filter((item) => item.category === category).map((filteredItem) => {
-			return <Item key={filteredItem.id} product={filteredItem} {...props} />;
+			return console.log(filteredItem);
+			// return <Item key={filteredItem.id} product={filteredItem} {...props} />;
 		});
 	};
 

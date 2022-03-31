@@ -7,12 +7,15 @@ import styles from '../css/Header.module.css';
 import { FaBars } from 'react-icons/fa';
 //Data
 import getCategories from '../data/allCategories';
+//Custom hook for context
+import { useGlobalContext } from '../context/context';
 
-function Header({ setCategory }) {
+function Header() {
 	const [ showLinks, setShowLinks ] = useState(false);
 	const linksContainerRef = useRef(null);
 	const linksRef = useRef(null);
 	const links = getCategories();
+	const { setCategory } = useGlobalContext();
 
 	const handleClick = (category) => {
 		setShowLinks(!showLinks);

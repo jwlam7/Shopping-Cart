@@ -13,10 +13,14 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
 	const [ state, dispatch ] = useReducer(reducer, initialState);
 
-	return <AppContext.Provider value={state}>{children}</AppContext.Provider>;
+	const setCategory = (category) => {
+		dispatch({ type: 'SET_CATEGORY', payload: category });
+	};
+
+	return <AppContext.Provider value={{ ...state, setCategory }}>{children}</AppContext.Provider>;
 };
 
 //custom hook for useContext
-const useGlobalContext = useContext(AppContext);
+const useGlobalContext = () => useContext(AppContext);
 
 export { AppProvider, useGlobalContext };
