@@ -8,20 +8,15 @@ import { FaBars } from 'react-icons/fa';
 //Data
 import getCategories from '../data/allCategories';
 
-function Header(props) {
+function Header({ setCategory }) {
 	const [ showLinks, setShowLinks ] = useState(false);
 	const linksContainerRef = useRef(null);
 	const linksRef = useRef(null);
 	const links = getCategories();
-	const { setCategory } = props;
 
 	const handleClick = (category) => {
 		setShowLinks(!showLinks);
-		if (category === 'Shop All') {
-			setCategory('ALL PRODUCTS');
-		} else {
-			setCategory(category);
-		}
+		category === 'Shop All' ? setCategory('ALL PRODUCTS') : setCategory(category);
 	};
 
 	useEffect(
@@ -29,11 +24,9 @@ function Header(props) {
 			//will require linksHeight for proper drop-down menu animation
 			const linksHeight = linksRef.current.getBoundingClientRect().height;
 
-			if (showLinks) {
-				linksContainerRef.current.style.height = `${linksHeight}px`;
-			} else {
-				linksContainerRef.current.style.height = '0px';
-			}
+			showLinks
+				? (linksContainerRef.current.style.height = `${linksHeight}px`)
+				: (linksContainerRef.current.style.height = '0px');
 		},
 		[ showLinks ]
 	);
@@ -45,12 +38,7 @@ function Header(props) {
 					<NavLink to={'/Shopping-Cart/products'} className={styles.navShop}>
 						Shop
 					</NavLink>
-					<button
-						className={styles.navToggle}
-						onClick={() => {
-							setShowLinks(!showLinks);
-						}}
-					>
+					<button className={styles.navToggle} onClick={() => setShowLinks(!showLinks)}>
 						<FaBars />
 					</button>
 				</div>
