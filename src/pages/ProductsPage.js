@@ -25,15 +25,13 @@ function ProductsPage() {
 
 	const getAllProducts = () => {
 		return allProducts.map((item) => {
-			return console.log(item);
-			// return <Item key={item.id} product={item} {...props} />;
+			return <Item key={item.id} {...item} />;
 		});
 	};
 
 	const getFilteredProducts = () => {
 		return allProducts.filter((item) => item.category === category).map((filteredItem) => {
-			return console.log(filteredItem);
-			// return <Item key={filteredItem.id} product={filteredItem} {...props} />;
+			return <Item key={filteredItem.id} {...filteredItem} />;
 		});
 	};
 

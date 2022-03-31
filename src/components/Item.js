@@ -4,7 +4,7 @@ import styles from '../css/Item.module.css';
 
 function Item(props) {
 	const { cart, setCart, quantity, setQuantity } = props;
-	const { id, name, price, src, alt } = props.product;
+	const { id, name, price, src, alt } = props;
 	const imgStyles = name.includes('KT Tape') ? styles.itemImgContain : styles.itemImgCover;
 
 	const addToCart = (e) => {

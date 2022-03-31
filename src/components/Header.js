@@ -11,9 +11,11 @@ import getCategories from '../data/allCategories';
 import { useGlobalContext } from '../context/context';
 
 function Header() {
+	//for drop-down menu
 	const [ showLinks, setShowLinks ] = useState(false);
 	const linksContainerRef = useRef(null);
 	const linksRef = useRef(null);
+	//for navigating to ProductsPage and displaying the correct items
 	const links = getCategories();
 	const { setCategory, cartAmount } = useGlobalContext();
 
