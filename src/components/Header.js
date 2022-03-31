@@ -15,7 +15,7 @@ function Header() {
 	const linksContainerRef = useRef(null);
 	const linksRef = useRef(null);
 	const links = getCategories();
-	const { setCategory } = useGlobalContext();
+	const { setCategory, cartAmount } = useGlobalContext();
 
 	const handleClick = (category) => {
 		setShowLinks(!showLinks);
@@ -53,6 +53,9 @@ function Header() {
 				<div>
 					<NavLink to={'/Shopping-Cart/cart'} className={styles.navCart}>
 						<i className='fas fa-shopping-cart' />
+						<div className={styles.navCartAmount}>
+							<p>{cartAmount}</p>
+						</div>
 					</NavLink>
 				</div>
 			</div>
