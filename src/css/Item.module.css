@@ -1,3 +1,26 @@
+.itemContainer {
+	position: relative;
+}
+
+.itemMsg {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.itemMsg p {
+	width: 80%;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: white;
+	background-color: rgb(48, 96, 230);
+	border-radius: 4px;
+}
+
 .itemImgCover,
 .itemImgContain {
 	width: 300px;
