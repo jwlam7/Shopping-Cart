@@ -17,7 +17,11 @@ const AppProvider = ({ children }) => {
 		dispatch({ type: 'SET_CATEGORY', payload: category });
 	};
 
-	return <AppContext.Provider value={{ ...state, setCategory }}>{children}</AppContext.Provider>;
+	const addToCart = (id) => {
+		dispatch({ type: 'ADD_TO_CART', payload: id });
+	};
+
+	return <AppContext.Provider value={{ ...state, setCategory, addToCart }}>{children}</AppContext.Provider>;
 };
 
 //custom hook for useContext

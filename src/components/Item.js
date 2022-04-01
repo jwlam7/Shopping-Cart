@@ -1,25 +1,13 @@
 import React from 'react';
-import allProducts from '../data/allProducts';
+//Styles
 import styles from '../css/Item.module.css';
+//Custom hook for context
+import { useGlobalContext } from '../context/context';
 
 function Item(props) {
-	const { cart, setCart, quantity, setQuantity } = props;
 	const { id, name, price, src, alt } = props;
+	const { addToCart } = useGlobalContext();
 	const imgStyles = name.includes('KT Tape') ? styles.itemImgContain : styles.itemImgCover;
-
-	const addToCart = (e) => {
-		const productId = Number(e.target.getAttribute('data-productid'));
-
-		if (!isProductInCart(productId)) {
-			const product = allProducts.find((item) => item.id === productId);
-			setCart([ ...cart, product ]);
-			setQuantity({ ...quantity, [id]: 1 });
-		}
-	};
-
-	const isProductInCart = (id) => {
-		return !!cart.find((item) => item.id === id);
-	};
 
 	return (
 		<div>
@@ -31,9 +19,7 @@ function Item(props) {
 					<h2>${price}</h2>
 				</div>
 				<div>
-					<button onClick={addToCart} data-productid={id}>
-						Add to Cart
-					</button>
+					<button onClick={() => addToCart(id)}>Add to Cart</button>
 				</div>
 			</div>
 		</div>
