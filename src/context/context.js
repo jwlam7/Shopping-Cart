@@ -1,11 +1,11 @@
-import React, { useReducer, createContext, useContext } from 'react';
+import React, { useReducer, useEffect, createContext, useContext } from 'react';
 //Reducer
 import reducer from '../reducers/reducer';
 
 const initialState = {
 	cart: [], //item objects in cart
-	cartAmount: 0, //# of items in cart,
-	dollars: 0, //$ of items in cart
+	totalAmount: 0, //# of items in cart,
+	totalDollars: 0, //$ of items in cart
 	category: 'ALL PRODUCTS'
 };
 
@@ -20,6 +20,13 @@ const AppProvider = ({ children }) => {
 	const addToCart = (id) => {
 		dispatch({ type: 'ADD_TO_CART', payload: id });
 	};
+
+	useEffect(
+		() => {
+			dispatch({ type: 'GET_TOTALS' });
+		},
+		[ state.cart ]
+	);
 
 	return <AppContext.Provider value={{ ...state, setCategory, addToCart }}>{children}</AppContext.Provider>;
 };

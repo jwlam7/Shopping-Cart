@@ -1,17 +1,19 @@
 import React from 'react';
+//Routing
 import { Link } from 'react-router-dom';
-import CartItem from '../components/CartItem';
+//Styles
 import styles from '../css/CartPage.module.css';
+//Components
+import CartItem from '../components/CartItem';
+//Custom hook for context
+import { useGlobalContext } from '../context/context';
 
-function CartPage(props) {
-	const { cart, quantity } = props;
-	const isCartEmpty = cart.length === 0 ? true : false;
+function CartPage() {
+	const { cart, totalDollars } = useGlobalContext();
+	const isCartEmpty = cart.length === 0;
 	const btnStyles = isCartEmpty ? styles.cartPageCheckoutBtnEmpty : styles.cartPageCheckoutBtnFull;
 
-	const displayCart = () => {
-		const display = isCartEmpty ? showEmptyCart() : showFullCart();
-		return display;
-	};
+	const displayCart = () => (isCartEmpty ? showEmptyCart() : showFullCart());
 
 	const showEmptyCart = () => {
 		return (
@@ -38,26 +40,20 @@ function CartPage(props) {
 						<h3>PRICE</h3>
 					</span>
 				</div>
-				{cart.map((item) => <CartItem key={item.id} product={item} {...props} />)}
+				{cart.map((item) => <CartItem key={item.id} {...item} />)}
 			</div>
 		);
 	};
 
-	const displaySubtotal = () => {
-		const sumArr = cart.map((item) => item.price * quantity[item.id]);
-		const sum = sumArr.reduce((prev, next) => prev + next);
-		return sum.toFixed(2);
-	};
-
 	return (
 		<div>
-			<div className={styles.cartPageContainer} id='container'>
+			<div className={styles.cartPageContainer}>
 				{displayCart()}
 
 				<div className={styles.cartPageCheckout}>
 					<div className={styles.cartPageSubtotal}>
 						<p>Subtotal</p>
-						<div>${isCartEmpty ? '0.00' : displaySubtotal()}</div>
+						<div>${totalDollars}</div>
 					</div>
 					<div>
 						<hr />

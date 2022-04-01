@@ -18,7 +18,8 @@ const allProducts = [
 		name: 'Theragun Pro',
 		price: 599,
 		src: TheragunPro,
-		alt: 'percussive massage gun'
+		alt: 'percussive massage gun',
+		quantity: 1
 	},
 	{
 		id: 2,
@@ -26,7 +27,8 @@ const allProducts = [
 		name: 'Hypervolt 2 Pro',
 		price: 399,
 		src: Hypervolt2Pro,
-		alt: 'percussive massage gun'
+		alt: 'percussive massage gun',
+		quantity: 1
 	},
 	{
 		id: 3,
@@ -34,7 +36,8 @@ const allProducts = [
 		name: 'Theragun Mini',
 		price: 199,
 		src: TheragunMini,
-		alt: 'percussive massage gun'
+		alt: 'percussive massage gun',
+		quantity: 1
 	},
 	{
 		id: 4,
@@ -42,7 +45,8 @@ const allProducts = [
 		name: 'Hypervolt Go',
 		price: 159,
 		src: HypervoltGo,
-		alt: 'percussive massage gun'
+		alt: 'percussive massage gun',
+		quantity: 1
 	},
 	{
 		id: 5,
@@ -50,7 +54,8 @@ const allProducts = [
 		name: 'Wave Roller',
 		price: 149,
 		src: WaveRoller,
-		alt: 'vibrational foam roller'
+		alt: 'vibrational foam roller',
+		quantity: 1
 	},
 	{
 		id: 6,
@@ -58,7 +63,8 @@ const allProducts = [
 		name: 'Vyper Go',
 		price: 149,
 		src: VyperGo,
-		alt: 'vibrational foam roller'
+		alt: 'vibrational foam roller',
+		quantity: 1
 	},
 	{
 		id: 7,
@@ -66,7 +72,8 @@ const allProducts = [
 		name: 'Wave Duo',
 		price: 99,
 		src: WaveDuo,
-		alt: 'vibrational ball'
+		alt: 'vibrational ball',
+		quantity: 1
 	},
 	{
 		id: 8,
@@ -74,7 +81,8 @@ const allProducts = [
 		name: 'Wave Solo',
 		price: 79,
 		src: WaveSolo,
-		alt: 'vibrational ball'
+		alt: 'vibrational ball',
+		quantity: 1
 	},
 	{
 		id: 9,
@@ -82,7 +90,8 @@ const allProducts = [
 		name: 'RockTape',
 		price: 22,
 		src: RockTape,
-		alt: 'kinesiotape'
+		alt: 'kinesiotape',
+		quantity: 1
 	},
 	{
 		id: 10,
@@ -90,7 +99,8 @@ const allProducts = [
 		name: 'Kinesio Tape',
 		price: 16,
 		src: KinesioTape,
-		alt: 'kinesiotape'
+		alt: 'kinesiotape',
+		quantity: 1
 	},
 	{
 		id: 11,
@@ -98,7 +108,8 @@ const allProducts = [
 		name: 'KT Tape (Wide)',
 		price: 16,
 		src: KTTapeWide,
-		alt: 'kinesiotape'
+		alt: 'kinesiotape',
+		quantity: 1
 	},
 	{
 		id: 12,
@@ -106,7 +117,8 @@ const allProducts = [
 		name: 'KT Tape',
 		price: 13,
 		src: KTTape,
-		alt: 'kinesiotape'
+		alt: 'kinesiotape',
+		quantity: 1
 	}
 ];
 
