@@ -21,6 +21,10 @@ const AppProvider = ({ children }) => {
 		dispatch({ type: 'ADD_TO_CART', payload: id });
 	};
 
+	const clearCart = () => {
+		dispatch({ type: 'CLEAR_CART' });
+	};
+
 	useEffect(
 		() => {
 			dispatch({ type: 'GET_TOTALS' });
@@ -28,7 +32,9 @@ const AppProvider = ({ children }) => {
 		[ state.cart ]
 	);
 
-	return <AppContext.Provider value={{ ...state, setCategory, addToCart }}>{children}</AppContext.Provider>;
+	return (
+		<AppContext.Provider value={{ ...state, setCategory, addToCart, clearCart }}>{children}</AppContext.Provider>
+	);
 };
 
 //custom hook for useContext
