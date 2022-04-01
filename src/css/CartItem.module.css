@@ -37,9 +37,6 @@
 .cartItemQuantity button {
 	border: none;
 	background-color: white;
-}
-
-.cartItemQuantity button:hover {
 	cursor: pointer;
 }
 
@@ -60,9 +57,6 @@
 
 .cartItemPrice button {
 	padding: 0.5em;
-}
-
-.cartItemPrice button:hover {
 	cursor: pointer;
 }
 

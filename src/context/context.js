@@ -25,6 +25,10 @@ const AppProvider = ({ children }) => {
 		dispatch({ type: 'CLEAR_CART' });
 	};
 
+	const removeItem = (id) => {
+		dispatch({ type: 'REMOVE_ITEM', payload: id });
+	};
+
 	useEffect(
 		() => {
 			dispatch({ type: 'GET_TOTALS' });
@@ -33,7 +37,9 @@ const AppProvider = ({ children }) => {
 	);
 
 	return (
-		<AppContext.Provider value={{ ...state, setCategory, addToCart, clearCart }}>{children}</AppContext.Provider>
+		<AppContext.Provider value={{ ...state, setCategory, addToCart, clearCart, removeItem }}>
+			{children}
+		</AppContext.Provider>
 	);
 };
 

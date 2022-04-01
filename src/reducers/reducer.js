@@ -10,6 +10,9 @@ const reducer = (state, action) => {
 			return { ...state, cart: [ ...state.cart, item ] };
 		case 'CLEAR_CART':
 			return { ...state, cart: [] };
+		case 'REMOVE_ITEM':
+			const newCart = state.cart.filter((item) => item.id !== action.payload);
+			return { ...state, cart: newCart };
 		case 'GET_TOTALS':
 			const { totalAmount, totalDollars } = state.cart.reduce(
 				(sum, nextItem) => {

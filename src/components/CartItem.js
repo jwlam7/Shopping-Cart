@@ -1,16 +1,13 @@
 import React, { Fragment } from 'react';
+//Styles
 import styles from '../css/CartItem.module.css';
+//Custom hook for context
+import { useGlobalContext } from '../context/context';
 
 function CartItem(props) {
-	// const { cart, setCart, quantity, setQuantity } = props;
-	const { id, name, price, src, alt } = props;
+	const { id, name, price, src, alt, quantity } = props;
+	const { removeItem } = useGlobalContext();
 	const imgStyles = name.includes('KT Tape') ? styles.cartItemImgContain : styles.cartItemImgCover;
-
-	// const removeFromCart = (e) => {
-	// 	const productId = Number(e.target.getAttribute('data-productid'));
-	// 	const productList = cart.filter((item) => item.id !== productId);
-	// 	setCart([ ...productList ]);
-	// };
 
 	// const decrementQuantity = (e) => {
 	// 	const productId = Number(e.target.getAttribute('data-productid'));
@@ -27,12 +24,11 @@ function CartItem(props) {
 	const quantitySection = () => {
 		return (
 			<div className={styles.cartItemQuantity}>
-				<button onClick={console.log('decrement')} data-productid={id}>
+				<button onClick={() => console.log('decrement')}>
 					<i className='fa-solid fa-minus' />
 				</button>
-				<input value={1} readOnly />
-				{/* <input value={quantity[id]} readOnly /> */}
-				<button onClick={console.log('increment')} data-productid={id}>
+				<input value={quantity} readOnly />
+				<button onClick={() => console.log('increment')}>
 					<i className='fa-solid fa-plus' />
 				</button>
 			</div>
@@ -45,7 +41,7 @@ function CartItem(props) {
 				<div className={styles.cartItemProduct}>
 					<img src={src} alt={alt} className={imgStyles} />
 					<span>
-						<span>{name}</span>
+						<div>{name}</div>
 						<div className={styles.hiddenContainer}>{quantitySection()}</div>
 					</span>
 				</div>
@@ -53,10 +49,8 @@ function CartItem(props) {
 				<div className={styles.visibleContainer}>{quantitySection()}</div>
 
 				<div className={styles.cartItemPrice}>
-					{/* <span>${price * quantity[id]}</span> */}
-					<button onClick={console.log('remove')} data-productid={id}>
-						Remove
-					</button>
+					<div>${price * quantity}</div>
+					<button onClick={() => removeItem(id)}>Remove</button>
 				</div>
 			</div>
 
