@@ -10,6 +10,10 @@ import RockTape from '../images/rocktape.jpg';
 import KinesioTape from '../images/kinesio-tape.jpg';
 import KTTapeWide from '../images/kt-tape-wide.jpg';
 import KTTape from '../images/kt-tape.jpg';
+import GoFitHook from '../images/gofitcane.jpg';
+import GoFitBar from '../images/gofitbar.jpg';
+import TriggerPointFoamRoller from '../images/foamroller.jpg';
+import TriggerPointBall from '../images/massageball.jpg';
 
 const allProducts = [
 	{
@@ -19,7 +23,8 @@ const allProducts = [
 		price: 599,
 		src: TheragunPro,
 		alt: 'percussive massage gun',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 2,
@@ -28,7 +33,8 @@ const allProducts = [
 		price: 399,
 		src: Hypervolt2Pro,
 		alt: 'percussive massage gun',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 3,
@@ -37,7 +43,8 @@ const allProducts = [
 		price: 199,
 		src: TheragunMini,
 		alt: 'percussive massage gun',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 4,
@@ -46,7 +53,8 @@ const allProducts = [
 		price: 159,
 		src: HypervoltGo,
 		alt: 'percussive massage gun',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 5,
@@ -55,7 +63,8 @@ const allProducts = [
 		price: 149,
 		src: WaveRoller,
 		alt: 'vibrational foam roller',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 6,
@@ -64,7 +73,8 @@ const allProducts = [
 		price: 149,
 		src: VyperGo,
 		alt: 'vibrational foam roller',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 7,
@@ -73,7 +83,8 @@ const allProducts = [
 		price: 99,
 		src: WaveDuo,
 		alt: 'vibrational ball',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 8,
@@ -82,7 +93,8 @@ const allProducts = [
 		price: 79,
 		src: WaveSolo,
 		alt: 'vibrational ball',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 9,
@@ -91,7 +103,8 @@ const allProducts = [
 		price: 22,
 		src: RockTape,
 		alt: 'kinesiotape',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 10,
@@ -100,7 +113,8 @@ const allProducts = [
 		price: 16,
 		src: KinesioTape,
 		alt: 'kinesiotape',
-		quantity: 1
+		quantity: 1,
+		largeImage: false
 	},
 	{
 		id: 11,
@@ -109,7 +123,8 @@ const allProducts = [
 		price: 16,
 		src: KTTapeWide,
 		alt: 'kinesiotape',
-		quantity: 1
+		quantity: 1,
+		largeImage: true
 	},
 	{
 		id: 12,
@@ -118,7 +133,48 @@ const allProducts = [
 		price: 13,
 		src: KTTape,
 		alt: 'kinesiotape',
-		quantity: 1
+		quantity: 1,
+		largeImage: true
+	},
+	{
+		id: 13,
+		category: 'Trigger-Point',
+		name: 'GoFit Hook',
+		price: 30,
+		src: GoFitHook,
+		alt: 'trigger-point',
+		quantity: 1,
+		largeImage: true
+	},
+	{
+		id: 14,
+		category: 'Trigger-Point',
+		name: 'GoFit Bar',
+		price: 25,
+		src: GoFitBar,
+		alt: 'trigger-point',
+		quantity: 1,
+		largeImage: false
+	},
+	{
+		id: 15,
+		category: 'Trigger-Point',
+		name: 'TP Roller',
+		price: 45,
+		src: TriggerPointFoamRoller,
+		alt: 'trigger-point',
+		quantity: 1,
+		largeImage: true
+	},
+	{
+		id: 16,
+		category: 'Trigger-Point',
+		name: 'TP Ball',
+		price: 22,
+		src: TriggerPointBall,
+		alt: 'trigger-point',
+		quantity: 1,
+		largeImage: false
 	}
 ];
 

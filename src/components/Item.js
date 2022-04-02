@@ -5,11 +5,11 @@ import styles from '../css/Item.module.css';
 import { useGlobalContext } from '../context/context';
 
 function Item(props) {
-	const { id, name, price, src, alt } = props;
+	const { id, name, price, src, alt, largeImage } = props;
 	const { cart, addToCart } = useGlobalContext();
 	const msg = useRef('');
 	const timerRef = useRef(null);
-	const imgStyles = name.includes('KT Tape') ? styles.itemImgContain : styles.itemImgCover;
+	const imgStyles = largeImage ? styles.itemImgContain : styles.itemImgCover;
 
 	const handleClick = (id) => {
 		const isProductInCart = cart.find((item) => item.id === id);
