@@ -13,6 +13,14 @@ const reducer = (state, action) => {
 		case 'REMOVE_ITEM':
 			const newCart = state.cart.filter((item) => item.id !== action.payload);
 			return { ...state, cart: newCart };
+		case 'INCREMENT_QUANTITY':
+			const newCart2 = state.cart.map((item) => {
+				if (item.quantity < 10 && item.id === action.payload) {
+					return { ...item, quantity: item.quantity + 1 };
+				}
+				return { ...item };
+			});
+			return { ...state, cart: newCart2 };
 		case 'GET_TOTALS':
 			const { totalAmount, totalDollars } = state.cart.reduce(
 				(sum, nextItem) => {
