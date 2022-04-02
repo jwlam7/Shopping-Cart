@@ -9,7 +9,7 @@ import CartItem from '../components/CartItem';
 import { useGlobalContext } from '../context/context';
 
 function CartPage() {
-	const { cart, clearCart, totalDollars } = useGlobalContext();
+	const { cart, totalAmount, clearCart, totalDollars } = useGlobalContext();
 	const isCartEmpty = cart.length === 0;
 	const btnStyles = isCartEmpty ? styles.cartPageCheckoutBtnEmpty : styles.cartPageCheckoutBtnFull;
 
@@ -31,7 +31,7 @@ function CartPage() {
 		return (
 			<div className={styles.cartPageCartFull}>
 				<h1>
-					Your Cart ({cart.length} item{cart.length > 1 ? 's' : ''})
+					Your Cart ({totalAmount} item{totalAmount > 1 ? 's' : ''})
 				</h1>
 				<div className={styles.cartPageReceipt}>
 					<h3>PRODUCT</h3>

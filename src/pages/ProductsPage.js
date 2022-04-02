@@ -7,11 +7,13 @@ import styles from '../css/ProductsPage.module.css';
 import Item from '../components/Item';
 //Data
 import allProducts from '../data/allProducts';
+import getCategories from '../data/allCategories';
 //Custom hook for context
 import { useGlobalContext } from '../context/context';
 
 function ProductsPage() {
 	const { category, setCategory } = useGlobalContext();
+	const links = getCategories();
 
 	const updateCategory = (e) => {
 		const isShopAll = e.target.className.includes('shop-all');
@@ -45,25 +47,26 @@ function ProductsPage() {
 				<h1>{category}</h1>
 				<hr />
 				<div className={styles.productsPageLinks}>
-					<Link to={'/Shopping-Cart/products'} onClick={updateCategory}>
-						<h1>Percussion</h1>
-						<br />
-					</Link>
-					<Link to={'/Shopping-Cart/products'} onClick={updateCategory}>
-						<h1>Vibration</h1>
-						<br />
-					</Link>
-					<Link to={'/Shopping-Cart/products'} onClick={updateCategory}>
-						<h1>Taping</h1>
-						<br />
-					</Link>
-					<Link to={'/Shopping-Cart/products'} onClick={updateCategory}>
-						<h2 className='shop-all'>
-							Shop All{'  '}
-							<i className='fas fa-long-arrow-alt-right shop-all' />
-						</h2>
-						<br />
-					</Link>
+					{links.map((link, idx) => {
+						if (link !== 'Shop All') {
+							return (
+								<Link to={'/Shopping-Cart/products'} key={idx} onClick={updateCategory}>
+									<h1>{link}</h1>
+									<br />
+								</Link>
+							);
+						} else {
+							return (
+								<Link to={'/Shopping-Cart/products'} key={idx} onClick={updateCategory}>
+									<h2 className='shop-all'>
+										{link}
+										{'  '}
+										<i className='fas fa-long-arrow-alt-right shop-all' />
+									</h2>
+								</Link>
+							);
+						}
+					})}
 				</div>
 			</div>
 
