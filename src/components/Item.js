@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 //Styles
 import styles from '../css/Item.module.css';
 //Custom hook for context
@@ -8,6 +8,7 @@ function Item(props) {
 	const { id, name, price, src, alt } = props;
 	const { cart, addToCart } = useGlobalContext();
 	const msg = useRef('');
+	const timerRef = useRef(null);
 	const imgStyles = name.includes('KT Tape') ? styles.itemImgContain : styles.itemImgCover;
 
 	const handleClick = (id) => {
@@ -18,8 +19,14 @@ function Item(props) {
 		} else {
 			msg.current.innerHTML = 'Item is already in cart';
 		}
-		setTimeout(() => (msg.current.innerHTML = ''), 3000);
+		timerRef.current = setTimeout(() => (msg.current.innerHTML = ''), 2000);
 	};
+
+	useEffect(() => {
+		//https://felixgerschau.com/react-hooks-settimeout/
+		//clears the timeout when navigating to another page
+		return () => clearTimeout(timerRef.current);
+	}, []);
 
 	return (
 		<div className={styles.itemContainer}>
