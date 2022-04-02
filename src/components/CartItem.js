@@ -6,19 +6,13 @@ import { useGlobalContext } from '../context/context';
 
 function CartItem(props) {
 	const { id, name, price, src, alt, quantity } = props;
-	const { removeItem, incrementQuantity } = useGlobalContext();
+	const { removeItem, decrementQuantity, incrementQuantity } = useGlobalContext();
 	const imgStyles = name.includes('KT Tape') ? styles.cartItemImgContain : styles.cartItemImgCover;
-
-	// const decrementQuantity = (e) => {
-	// 	const productId = Number(e.target.getAttribute('data-productid'));
-	// 	const currQuantity = quantity[id];
-	// 	if (currQuantity > 1) setQuantity({ ...quantity, [productId]: currQuantity - 1 });
-	// };
 
 	const quantitySection = () => {
 		return (
 			<div className={styles.cartItemQuantity}>
-				<button onClick={() => console.log('decrement')}>
+				<button onClick={() => decrementQuantity(id)}>
 					<i className='fa-solid fa-minus' />
 				</button>
 				<input value={quantity} readOnly />
