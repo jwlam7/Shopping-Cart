@@ -5,9 +5,9 @@ import styles from '../css/CartItem.module.css';
 import { useGlobalContext } from '../context/context';
 
 function CartItem(props) {
-	const { id, name, price, src, alt, quantity } = props;
+	const { id, name, price, src, alt, quantity, largeImage } = props;
 	const { removeItem, decrementQuantity, incrementQuantity } = useGlobalContext();
-	const imgStyles = name.includes('KT Tape') ? styles.cartItemImgContain : styles.cartItemImgCover;
+	const imgStyles = largeImage ? styles.cartItemImgContain : styles.cartItemImgCover;
 
 	const quantitySection = () => {
 		return (
