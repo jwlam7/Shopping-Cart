@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/Shopping-Cart/static/css/main.97514415.css",
-    "main.js": "/Shopping-Cart/static/js/main.9c4b6273.js",
+    "main.css": "/Shopping-Cart/static/css/main.f87e523c.css",
+    "main.js": "/Shopping-Cart/static/js/main.f4df6c35.js",
     "static/js/787.d6fe38e8.chunk.js": "/Shopping-Cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/gofitcane.jpg": "/Shopping-Cart/static/media/gofitcane.b1f0531319ecf7474954.jpg",
     "static/media/wave-roller.jpg": "/Shopping-Cart/static/media/wave-roller.da4a3f4d061cf8902e8c.jpg",
+    "static/media/massageball.jpg": "/Shopping-Cart/static/media/massageball.250a4131f490b23c3781.jpg",
     "static/media/rocktape.jpg": "/Shopping-Cart/static/media/rocktape.2ffd8f20ba1de7195822.jpg",
     "static/media/pdp-pro-hero.jpg": "/Shopping-Cart/static/media/pdp-pro-hero.d8f8f372fa57b3f6ec1f.jpg",
     "static/media/waveduo.jpg": "/Shopping-Cart/static/media/waveduo.d6374c4bc341c36daf5a.jpg",
@@ -13,15 +15,16 @@
     "static/media/kinesio-tape.jpg": "/Shopping-Cart/static/media/kinesio-tape.b28668aba55aff7033db.jpg",
     "static/media/pdp-mini-black-hero-1.jpg": "/Shopping-Cart/static/media/pdp-mini-black-hero-1.9ddabc56548e80f7fcfe.jpg",
     "static/media/kt-tape-wide.jpg": "/Shopping-Cart/static/media/kt-tape-wide.c64cc080edd828322368.jpg",
+    "static/media/foamroller.jpg": "/Shopping-Cart/static/media/foamroller.d0f88f22bd4a8e5d8b6b.jpg",
     "static/media/vyper-go.jpg": "/Shopping-Cart/static/media/vyper-go.6daa0c596a6456ba1e9f.jpg",
     "static/media/hypervolt-2-pro.jpg": "/Shopping-Cart/static/media/hypervolt-2-pro.e4357fca5fbf91165b02.jpg",
     "index.html": "/Shopping-Cart/index.html",
-    "main.97514415.css.map": "/Shopping-Cart/static/css/main.97514415.css.map",
-    "main.9c4b6273.js.map": "/Shopping-Cart/static/js/main.9c4b6273.js.map",
+    "main.f87e523c.css.map": "/Shopping-Cart/static/css/main.f87e523c.css.map",
+    "main.f4df6c35.js.map": "/Shopping-Cart/static/js/main.f4df6c35.js.map",
     "787.d6fe38e8.chunk.js.map": "/Shopping-Cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.97514415.css",
-    "static/js/main.9c4b6273.js"
+    "static/css/main.f87e523c.css",
+    "static/js/main.f4df6c35.js"
   ]
 }
