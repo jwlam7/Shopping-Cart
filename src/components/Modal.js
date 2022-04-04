@@ -13,7 +13,9 @@ const Modal = () => {
 	return (
 		<div className={showModal ? `${styles.modalContainer} ${styles.showModal}` : styles.modalContainer}>
 			<div className={styles.modalContent}>
-				<h1>Modal</h1>
+				<div className={styles.modalSpecs}>
+					<h2>Specs:</h2>
+				</div>
 				<div className={styles.modalCloseBtn} onClick={() => toggleModal(null)}>
 					<FaTimes />
 				</div>

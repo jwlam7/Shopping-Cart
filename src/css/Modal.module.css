@@ -19,17 +19,41 @@
 
 .modalContent {
 	position: relative;
-	width: 90vw;
-	height: 70vh;
-	background-color: white;
+	max-width: 750px;
+	width: 70vw;
+	height: 350px;
+	background: url(../images/logo.jpg);
+	background-position: right;
+	background-size: contain;
 	border-radius: 4px;
+}
+
+.modalSpecs {
+	width: 75%;
+	padding: 0em 1em;
+}
+
+.modalSpecs h2 {
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 1px black;
 }
 
 .modalCloseBtn {
 	position: absolute;
-	top: 1em;
-	right: 1em;
+	top: 0.5em;
+	right: 0.5em;
 	padding: 0.25em;
 	font-size: 1.5em;
 	cursor: pointer;
+}
+
+/* ------------------------------------------------ */
+
+@media (max-width: 850px) {
+	.modalContent {
+		width: 75vw;
+		background-repeat: no-repeat;
+		background-position: left;
+		background-size: auto;
+	}
 }
