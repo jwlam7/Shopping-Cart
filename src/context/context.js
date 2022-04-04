@@ -6,7 +6,9 @@ const initialState = {
 	cart: [], //item objects in cart
 	totalAmount: 0, //# of items in cart,
 	totalDollars: 0, //$ of items in cart
-	category: 'ALL PRODUCTS'
+	category: 'ALL PRODUCTS',
+	showModal: false,
+	modalDetails: {}
 };
 
 const AppContext = createContext();
@@ -37,6 +39,10 @@ const AppProvider = ({ children }) => {
 		dispatch({ type: 'INCREMENT_QUANTITY', payload: id });
 	};
 
+	const toggleModal = (item) => {
+		dispatch({ type: 'TOGGLE_MODAL', payload: item });
+	};
+
 	useEffect(
 		() => {
 			dispatch({ type: 'GET_TOTALS' });
@@ -46,7 +52,16 @@ const AppProvider = ({ children }) => {
 
 	return (
 		<AppContext.Provider
-			value={{ ...state, setCategory, addToCart, clearCart, removeItem, decrementQuantity, incrementQuantity }}
+			value={{
+				...state,
+				setCategory,
+				addToCart,
+				clearCart,
+				removeItem,
+				decrementQuantity,
+				incrementQuantity,
+				toggleModal
+			}}
 		>
 			{children}
 		</AppContext.Provider>

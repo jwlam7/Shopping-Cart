@@ -29,6 +29,8 @@ const reducer = (state, action) => {
 				return { ...item };
 			});
 			return { ...state, cart: newCart3 };
+		case 'TOGGLE_MODAL':
+			return { ...state, showModal: !state.showModal, modalDetails: { ...action.payload } };
 		case 'GET_TOTALS':
 			const { totalAmount, totalDollars } = state.cart.reduce(
 				(sum, nextItem) => {

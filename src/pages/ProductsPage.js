@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import styles from '../css/ProductsPage.module.css';
 //Components
 import Item from '../components/Item';
+import Modal from '../components/Modal';
 //Data
 import allProducts from '../data/allProducts';
 import getCategories from '../data/allCategories';
@@ -71,6 +72,8 @@ function ProductsPage() {
 			</div>
 
 			<div className={styles.productsPageItem}>{displayCategory()}</div>
+
+			<Modal />
 		</div>
 	);
 }

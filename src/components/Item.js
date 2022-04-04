@@ -6,7 +6,7 @@ import { useGlobalContext } from '../context/context';
 
 function Item(props) {
 	const { id, name, price, src, alt, largeImage } = props;
-	const { cart, addToCart } = useGlobalContext();
+	const { cart, addToCart, toggleModal } = useGlobalContext();
 	const msg = useRef('');
 	const timerRef = useRef(null);
 	const imgStyles = largeImage ? styles.itemImgContain : styles.itemImgCover;
@@ -34,7 +34,7 @@ function Item(props) {
 				<p ref={msg} />
 			</div>
 
-			<img src={src} alt={alt} className={imgStyles} />
+			<img src={src} alt={alt} className={imgStyles} onClick={() => toggleModal({ ...props })} />
 
 			<div className={styles.itemDetails}>
 				<div>
