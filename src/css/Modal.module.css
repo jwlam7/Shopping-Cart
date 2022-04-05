@@ -29,13 +29,22 @@
 }
 
 .modalSpecs {
-	width: 75%;
-	padding: 0em 1em;
+	width: 80%;
+	padding-left: 1em;
 }
 
 .modalSpecs h2 {
-	letter-spacing: 2px;
+	letter-spacing: 4px;
 	text-shadow: 1px 1px 1px black;
+}
+
+.modalSpecs p {
+	padding-left: 2em;
+	font-size: 1.1em;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	text-shadow: 10px 10px 10px white;
 }
 
 .modalCloseBtn {
@@ -55,5 +64,11 @@
 		background-repeat: no-repeat;
 		background-position: left;
 		background-size: auto;
+	}
+}
+
+@media (max-width: 450px) {
+	.modalSpecs p {
+		font-size: 1em;
 	}
 }

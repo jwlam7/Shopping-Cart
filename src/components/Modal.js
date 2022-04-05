@@ -8,13 +8,23 @@ import { useGlobalContext } from '../context/context';
 
 const Modal = () => {
 	const { showModal, toggleModal, modalDetails } = useGlobalContext();
-	console.log(modalDetails);
+	const { specs } = modalDetails;
 
 	return (
 		<div className={showModal ? `${styles.modalContainer} ${styles.showModal}` : styles.modalContainer}>
 			<div className={styles.modalContent}>
 				<div className={styles.modalSpecs}>
-					<h2>Specs:</h2>
+					<h2>Specs</h2>
+					{specs &&
+						Object.entries(specs).map((spec, idx) => {
+							const [ key, val ] = spec;
+
+							return (
+								<p key={idx}>
+									{key}: {val}
+								</p>
+							);
+						})}
 				</div>
 				<div className={styles.modalCloseBtn} onClick={() => toggleModal(null)}>
 					<FaTimes />
