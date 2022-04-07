@@ -9,6 +9,8 @@ function CartItem(props) {
 	const { removeItem, decrementQuantity, incrementQuantity } = useGlobalContext();
 	const imgStyles = largeImage ? styles.cartItemImgContain : styles.cartItemImgCover;
 
+	//will have 2 different versions of quantitySection below (for responsiveness)
+	//when one is visible, the other will be hidden and vice-versa
 	const quantitySection = () => {
 		return (
 			<div className={styles.cartItemQuantity}>
@@ -30,10 +32,12 @@ function CartItem(props) {
 					<img src={src} alt={alt} className={imgStyles} />
 					<span>
 						<div>{name}</div>
+						{/* will only display this version of quantitySection on mobile devices */}
 						<div className={styles.hiddenContainer}>{quantitySection()}</div>
 					</span>
 				</div>
 
+				{/* will only display this version of quantitySection on tablet/laptop/desktop devices */}
 				<div className={styles.visibleContainer}>{quantitySection()}</div>
 
 				<div className={styles.cartItemPrice}>

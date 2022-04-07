@@ -7,9 +7,11 @@ import { useGlobalContext } from '../context/context';
 function Item(props) {
 	const { id, name, price, src, alt, largeImage } = props;
 	const { cart, addToCart, toggleModal } = useGlobalContext();
-	const msg = useRef('');
-	const timerRef = useRef(null);
 	const imgStyles = largeImage ? styles.itemImgContain : styles.itemImgCover;
+	//for creating an alert message when adding item to cart
+	const msg = useRef('');
+	//for creating a setTimeout to remove the alert message
+	const timerRef = useRef(null);
 
 	const handleClick = (id) => {
 		const isProductInCart = cart.find((item) => item.id === id);
@@ -22,9 +24,9 @@ function Item(props) {
 		timerRef.current = setTimeout(() => (msg.current.innerHTML = ''), 2000);
 	};
 
+	//https://felixgerschau.com/react-hooks-settimeout/
+	//clears the timeout immediately when navigating to another page
 	useEffect(() => {
-		//https://felixgerschau.com/react-hooks-settimeout/
-		//clears the timeout when navigating to another page
 		return () => clearTimeout(timerRef.current);
 	}, []);
 

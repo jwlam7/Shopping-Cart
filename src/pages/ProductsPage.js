@@ -38,6 +38,7 @@ function ProductsPage() {
 		});
 	};
 
+	//when page loads, have page automatically scroll to the top
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -48,6 +49,10 @@ function ProductsPage() {
 				<h1>{category}</h1>
 				<hr />
 				<div className={styles.productsPageLinks}>
+					{/* 
+						every category will be displayed with the same format
+						the only exception is for the category: 'Shop All' (as it has an h2-tag and an icon)
+					*/}
 					{links.map((link, idx) => {
 						if (link !== 'Shop All') {
 							return (

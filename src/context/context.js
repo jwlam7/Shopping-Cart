@@ -3,12 +3,12 @@ import React, { useReducer, useEffect, createContext, useContext } from 'react';
 import reducer from '../reducers/reducer';
 
 const initialState = {
-	cart: [], //item objects in cart
-	totalAmount: 0, //# of items in cart,
-	totalDollars: 0, //$ of items in cart
-	category: 'ALL PRODUCTS',
-	showModal: false,
-	modalDetails: {}
+	cart: [], //item(s) in cart
+	totalAmount: 0, //# of item(s) in cart
+	totalDollars: 0, //$ of item(s) in cart
+	category: 'ALL PRODUCTS', //filter products by category
+	showModal: false, //open or close modal
+	modalDetails: {} //temporarily store current item, to display details in modal
 };
 
 const AppContext = createContext();
