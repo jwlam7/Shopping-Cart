@@ -36,12 +36,20 @@
 	text-shadow: 1px 1px 5px white;
 }
 
+.homePageForm {
+	width: 100%;
+}
+
 .homePageEmailInput {
+	width: 60%;
+	max-width: 350px;
 	font-size: 1.2em;
 	padding: 0.5em;
 }
 
 .homePageSubscribeBtn {
+	width: 30%;
+	max-width: 125px;
 	font-size: 1.2em;
 	padding: 0.5em;
 	color: white;
@@ -74,15 +82,12 @@
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 	.homePageForm {
-		width: 90%;
-		font-size: 0.75em;
-	}
-	.homePageEmailInput {
-		width: 50%;
+		width: 90vw;
+		font-size: 0.85em;
 	}
 	.homePageSubscribeBtn {
-		width: 30%;
+		max-width: 100px;
 	}
 }
