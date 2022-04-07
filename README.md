@@ -2,6 +2,20 @@
 
 #### Live site: https://jonlam1989.github.io/Shopping-Cart/
 
+## Description
+
+A health and wellness e-commerce application
+
+## Features
+
+- Clean UI design for ease-of-use
+
+- Fully functional shopping cart
+
+- Filter products by categories
+
+- Responsive design
+
 ## Screenshots
 
 #### Home Page
