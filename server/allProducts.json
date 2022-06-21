@@ -1,0 +1,260 @@
+[
+	{
+		"category": "Percussion",
+		"name": "Theragun Pro",
+		"price": 599,
+		"quantity": 1,
+		"src": "https://i.ibb.co/cFBHPLK/pdp-pro-hero.jpg",
+		"alt": "percussive massage gun",
+		"largeImage": false,
+		"specs": {
+			"material": "plastic",
+			"dimensions": "10in x 7in x 3in",
+			"weight": "3 lbs",
+			"battery_life": "180 mins / 3 hrs",
+			"mode": "5 levels of speed",
+			"head_attachments": "6"
+		}
+	},
+	{
+		"category": "Percussion",
+		"name": "Hypervolt 2 Pro",
+		"price": 399,
+		"quantity": 1,
+		"src": "https://i.ibb.co/PmMy90Z/hypervolt-2-pro.jpg",
+		"alt": "percussive massage gun",
+		"largeImage": false,
+		"specs": {
+			"material": "plastic",
+			"dimensions": "10in x 8in x 2in",
+			"weight": "2.6 lbs",
+			"battery_life": "180 mins / 3 hrs",
+			"mode": "5 levels of speed",
+			"head_attachments": "5"
+		}
+	},
+	{
+		"category": "Percussion",
+		"name": "Theragun Mini",
+		"price": 199,
+		"quantity": 1,
+		"src": "https://i.ibb.co/wN5TYr6/pdp-mini-black-hero-1.jpg",
+		"alt": "percussive massage gun",
+		"largeImage": false,
+		"specs": {
+			"material": "plastic",
+			"dimensions": "6in x 5in x 2in",
+			"weight": "1.5 lbs",
+			"battery_life": "150 mins / 2.5 hrs",
+			"mode": "3 levels of speed",
+			"head_attachments": "1"
+		}
+	},
+	{
+		"category": "Percussion",
+		"name": "Hypervolt Go",
+		"price": 159,
+		"quantity": 1,
+		"src": "https://i.ibb.co/vJRBGGc/hypervolt-go.jpg",
+		"alt": "percussive massage gun",
+		"largeImage": false,
+		"specs": {
+			"material": "plastic",
+			"dimensions": "5in x 5in x 2in",
+			"weight": "1.5 lbs",
+			"battery_life": "150 mins / 2.5 hrs",
+			"mode": "3 levels of speed",
+			"head_attachments": "2"
+		}
+	},
+	{
+		"category": "Vibration",
+		"name": "Wave Roller",
+		"price": 149,
+		"quantity": 1,
+		"src": "https://i.ibb.co/jRw8qfV/wave-roller.jpg",
+		"alt": "vibrational foam roller",
+		"largeImage": false,
+		"specs": {
+			"material": "plastic",
+			"dimensions": "12in x 5in x 4in",
+			"weight": "3 lbs",
+			"battery_life": "180 mins / 3 hrs",
+			"mode": "5 levels of speed",
+			"weight_capacity": "350 lbs"
+		}
+	},
+	{
+		"category": "Vibration",
+		"name": "Vyper Go",
+		"price": 149,
+		"quantity": 1,
+		"src": "https://i.ibb.co/R4H8KFn/vyper-go.jpg",
+		"alt": "vibrational foam roller",
+		"largeImage": false,
+		"specs": {
+			"material": "plastic",
+			"dimensions": "10in x 4in x 4in",
+			"weight": "2 lbs",
+			"battery_life": "120 mins / 2 hrs",
+			"mode": "3 levels of speed",
+			"weight_capacity": "350 lbs"
+		}
+	},
+	{
+		"category": "Vibration",
+		"name": "Wave Duo",
+		"price": 99,
+		"quantity": 1,
+		"src": "https://i.ibb.co/4VBjfm8/waveduo.jpg",
+		"alt": "vibrational ball",
+		"largeImage": false,
+		"specs": {
+			"material": "plastic",
+			"dimensions": "7in x 4in x 3in",
+			"weight": "2 lbs",
+			"battery_life": "200 mins / 3.33 hrs",
+			"mode": "5 levels of speed",
+			"weight_capacity": "350 lbs"
+		}
+	},
+	{
+		"category": "Vibration",
+		"name": "Wave Solo",
+		"price": 79,
+		"quantity": 1,
+		"src": "https://i.ibb.co/MfhkkcR/wavesolo.jpg",
+		"alt": "vibrational ball",
+		"largeImage": false,
+		"specs": {
+			"material": "textured silicone",
+			"dimensions": "3.4in diameter",
+			"weight": "0.7 lbs",
+			"battery_life": "200 mins / 3.33 hrs",
+			"mode": "3 levels of speed",
+			"weight_capacity": "350 lbs"
+		}
+	},
+	{
+		"category": "Taping",
+		"name": "RockTape",
+		"price": 22,
+		"quantity": 1,
+		"src": "https://i.ibb.co/19MZ46K/rocktape.jpg",
+		"alt": "kinesiotape",
+		"largeImage": false,
+		"specs": {
+			"material": "nylon, cotton",
+			"quantity": "1 roll of tape",
+			"dimensions": "2in x 5yds (per roll)",
+			"usage": "can last 3-5 days",
+			"water_resistant": "yes"
+		}
+	},
+	{
+		"category": "Taping",
+		"name": "Kinesio Tape",
+		"price": 16,
+		"quantity": 1,
+		"src": "https://i.ibb.co/jy5kLj0/kinesio-tape.jpg",
+		"alt": "kinesiotape",
+		"largeImage": false,
+		"specs": {
+			"material": "spandex, cotton",
+			"quantity": "2 roll of tape",
+			"dimensions": "1in x 5yds (per roll)",
+			"usage": "can last 3-5 days",
+			"water_resistant": "yes"
+		}
+	},
+	{
+		"category": "Taping",
+		"name": "KT Tape (Wide)",
+		"price": 16,
+		"quantity": 1,
+		"src": "https://i.ibb.co/KFvdmQP/kt-tape-wide.jpg",
+		"alt": "kinesiotape",
+		"largeImage": true,
+		"specs": {
+			"material": "spandex, cotton",
+			"quantity": "10 precut strips of tape",
+			"dimensions": "4in x 10in (per strip)",
+			"usage": "can last 4-7 days",
+			"water_resistant": "yes"
+		}
+	},
+	{
+		"category": "Taping",
+		"name": "KT Tape",
+		"price": 13,
+		"quantity": 1,
+		"src": "https://i.ibb.co/kM3xsyH/kt-tape.jpg",
+		"alt": "kinesiotape",
+		"largeImage": true,
+		"specs": {
+			"material": "spandex, cotton",
+			"quantity": "20 precut strips of tape",
+			"dimensions": "2in x 10in (per strip)",
+			"usage": "can last 3-5 days",
+			"water_resistant": "yes"
+		}
+	},
+	{
+		"category": "Trigger-Point",
+		"name": "GoFit Hook",
+		"price": 30,
+		"quantity": 1,
+		"src": "https://i.ibb.co/1XXm6Th/gofitcane.jpg",
+		"alt": "trigger-point",
+		"largeImage": true,
+		"specs": {
+			"material": "plastic",
+			"dimensions": "23in x 14in x 1in",
+			"weight": "2.1 lbs"
+		}
+	},
+	{
+		"category": "Trigger-Point",
+		"name": "GoFit Bar",
+		"price": 25,
+		"quantity": 1,
+		"src": "https://i.ibb.co/z7fgYLH/gofitbar.jpg",
+		"alt": "trigger-point",
+		"largeImage": false,
+		"specs": {
+			"material": "plastic",
+			"dimensions": "22in x 6in x 1in",
+			"weight": "1.4 lbs"
+		}
+	},
+	{
+		"category": "Trigger-Point",
+		"name": "TP Roller",
+		"price": 45,
+		"quantity": 1,
+		"src": "https://i.ibb.co/v14cS5s/foamroller.jpg",
+		"alt": "trigger-point",
+		"largeImage": true,
+		"specs": {
+			"material": "EVA (ethylene vinyl acetate)",
+			"dimensions": "26in x 5in x 5in",
+			"weight": "2.86 lbs",
+			"weight_capacity": "325 lbs"
+		}
+	},
+	{
+		"category": "Trigger-Point",
+		"name": "TP Ball",
+		"price": 22,
+		"quantity": 1,
+		"src": "https://i.ibb.co/VMyKdFm/massageball.jpg",
+		"alt": "trigger-point",
+		"largeImage": false,
+		"specs": {
+			"material": "EVA (ethylene vinyl acetate)",
+			"dimensions": "5in x 5in x 5in",
+			"weight": "0.12 lbs",
+			"weight_capacity": "325 lbs"
+		}
+	}
+]

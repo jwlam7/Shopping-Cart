@@ -1,5 +1,18 @@
 const mongoose = require('mongoose');
 
+const SpecSchema = new mongoose.Schema({
+	material: String,
+	dimensions: String,
+	weight: String,
+	battery_life: String,
+	mode: String,
+	head_attachments: String,
+	weight_capacity: String,
+	quantity: String,
+	usage: String,
+	water_resistant: String
+});
+
 const ProductSchema = new mongoose.Schema({
 	category: {
 		type: String,
@@ -31,7 +44,7 @@ const ProductSchema = new mongoose.Schema({
 		type: Boolean,
 		required: true
 	},
-	spec: {}
+	specs: SpecSchema
 });
 
 module.exports = mongoose.model('Product', ProductSchema);
