@@ -3,6 +3,8 @@ import allProducts from '../data/allProducts';
 
 const reducer = (state, action) => {
 	switch (action.type) {
+		case 'SET_PRODUCTS':
+			return { ...state, products: action.payload };
 		case 'SET_CATEGORY':
 			return { ...state, category: action.payload };
 		case 'ADD_TO_CART':

@@ -36,16 +36,6 @@ function Header() {
 		[ showLinks ]
 	);
 
-	// useEffect(() => {
-	// 	const fetchData = async () => {
-	// 		const res = await fetch('/api');
-	// 		const data = await res.json();
-	// 		console.log(data);
-	// 	};
-
-	// 	fetchData();
-	// }, []);
-
 	return (
 		<div>
 			<div className={styles.nav}>

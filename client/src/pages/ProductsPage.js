@@ -7,13 +7,14 @@ import styles from '../css/ProductsPage.module.css';
 import Item from '../components/Item';
 import Modal from '../components/Modal';
 //Data
-import allProducts from '../data/allProducts';
+// import allProducts from '../data/allProducts';
 import getCategories from '../data/allCategories';
 //Custom hook for context
 import { useGlobalContext } from '../context/context';
 
 function ProductsPage() {
-	const { category, setCategory } = useGlobalContext();
+	const { products, category, setCategory } = useGlobalContext();
+	console.log(products);
 	const links = getCategories();
 
 	const updateCategory = (e) => {
@@ -27,14 +28,14 @@ function ProductsPage() {
 	};
 
 	const getAllProducts = () => {
-		return allProducts.map((item) => {
-			return <Item key={item.id} {...item} />;
+		return products.map((item) => {
+			return <Item key={item._id} {...item} />;
 		});
 	};
 
 	const getFilteredProducts = () => {
-		return allProducts.filter((item) => item.category === category).map((filteredItem) => {
-			return <Item key={filteredItem.id} {...filteredItem} />;
+		return products.filter((item) => item.category === category).map((filteredItem) => {
+			return <Item key={filteredItem._id} {...filteredItem} />;
 		});
 	};
 

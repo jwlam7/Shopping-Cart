@@ -15,6 +15,10 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
 	const [ state, dispatch ] = useReducer(reducer, initialState);
 
+	const setProducts = ({ products }) => {
+		dispatch({ type: 'SET_PRODUCTS', payload: products });
+	};
+
 	const setCategory = (category) => {
 		dispatch({ type: 'SET_CATEGORY', payload: category });
 	};
@@ -49,6 +53,16 @@ const AppProvider = ({ children }) => {
 		},
 		[ state.cart ]
 	);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			const response = await fetch('/api');
+			const data = await response.json();
+			setProducts(data);
+		};
+
+		fetchData();
+	}, []);
 
 	return (
 		<AppContext.Provider
