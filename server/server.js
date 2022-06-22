@@ -3,11 +3,11 @@ const express = require('express');
 const app = express();
 //DB connection
 const connectDB = require('./db/connect');
+//Express Router
+const productsRouter = require('./routes/products');
 
 //routes
-app.get('/api/', (req, res) => {
-	res.json({ msg: 'hello world' });
-});
+app.use('/api', productsRouter);
 
 const PORT = process.env.PORT || 3001;
 const start = async () => {
