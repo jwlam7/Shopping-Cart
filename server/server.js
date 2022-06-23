@@ -5,9 +5,13 @@ const app = express();
 const connectDB = require('./db/connect');
 //Express Router
 const productsRouter = require('./routes/products');
+//Middlewares
+const notFoundMiddleware = require('./middleware/notFound');
 
 //routes
 app.use('/api', productsRouter);
+
+app.use(notFoundMiddleware);
 
 const PORT = process.env.PORT || 3001;
 const start = async () => {
