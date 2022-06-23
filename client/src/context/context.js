@@ -15,8 +15,12 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
 	const [ state, dispatch ] = useReducer(reducer, initialState);
 
-	const setProducts = ({ products }) => {
-		dispatch({ type: 'SET_PRODUCTS', payload: products });
+	const setAllProducts = ({ products }) => {
+		dispatch({ type: 'SET_ALLPRODUCTS', payload: products });
+	};
+
+	const setAllCategories = (allCategories) => {
+		dispatch({ type: 'SET_ALLCATEGORIES', payload: allCategories });
 	};
 
 	const setCategory = (category) => {
@@ -55,13 +59,16 @@ const AppProvider = ({ children }) => {
 	);
 
 	useEffect(() => {
-		const fetchData = async () => {
+		const initializeData = async () => {
 			const response = await fetch('/api');
 			const data = await response.json();
-			setProducts(data);
+			setAllProducts(data);
+
+			const allCategories = await data.products.map((item) => item.category);
+			setAllCategories([ ...new Set(allCategories), 'Shop All' ]);
 		};
 
-		fetchData();
+		initializeData();
 	}, []);
 
 	return (

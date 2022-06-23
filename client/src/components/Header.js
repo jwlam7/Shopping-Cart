@@ -5,8 +5,6 @@ import { NavLink } from 'react-router-dom';
 import styles from '../css/Header.module.css';
 //Icons
 import { FaBars } from 'react-icons/fa';
-//Data
-import getCategories from '../data/allCategories';
 //Custom hook for context
 import { useGlobalContext } from '../context/context';
 
@@ -16,9 +14,8 @@ function Header() {
 	const linksContainerRef = useRef(null);
 	const linksRef = useRef(null);
 	//for navigating to ProductsPage and displaying the correct items
-	const links = getCategories();
-	const { setCategory, totalAmount } = useGlobalContext();
-
+	const { allCategories, setCategory, totalAmount } = useGlobalContext();
+	
 	const handleClick = (category) => {
 		setShowLinks(!showLinks);
 		category === 'Shop All' ? setCategory('ALL PRODUCTS') : setCategory(category);
@@ -64,7 +61,7 @@ function Header() {
 
 			<div className={styles.navLinksContainer} ref={linksContainerRef}>
 				<ul className={styles.navLinks} ref={linksRef}>
-					{links.map((link, idx) => {
+					{allCategories?.map((link, idx) => {
 						return (
 							<li key={idx}>
 								<NavLink to={'/Shopping-Cart/products'} onClick={() => handleClick(link)}>

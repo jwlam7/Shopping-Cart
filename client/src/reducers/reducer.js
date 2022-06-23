@@ -1,14 +1,13 @@
-//Data
-import allProducts from '../data/allProducts';
-
 const reducer = (state, action) => {
 	switch (action.type) {
-		case 'SET_PRODUCTS':
-			return { ...state, products: action.payload };
+		case 'SET_ALLPRODUCTS':
+			return { ...state, allProducts: action.payload };
+		case 'SET_ALLCATEGORIES':
+			return { ...state, allCategories: action.payload };
 		case 'SET_CATEGORY':
 			return { ...state, category: action.payload };
 		case 'ADD_TO_CART':
-			const item = allProducts.find((item) => item.id === action.payload);
+			const item = state.allProducts.find((item) => item.id === action.payload);
 			return { ...state, cart: [ ...state.cart, item ] };
 		case 'CLEAR_CART':
 			return { ...state, cart: [] };

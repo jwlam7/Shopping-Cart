@@ -6,16 +6,11 @@ import styles from '../css/ProductsPage.module.css';
 //Components
 import Item from '../components/Item';
 import Modal from '../components/Modal';
-//Data
-// import allProducts from '../data/allProducts';
-import getCategories from '../data/allCategories';
 //Custom hook for context
 import { useGlobalContext } from '../context/context';
 
 function ProductsPage() {
-	const { products, category, setCategory } = useGlobalContext();
-	console.log(products);
-	const links = getCategories();
+	const { allProducts, allCategories, category, setCategory } = useGlobalContext();
 
 	const updateCategory = (e) => {
 		const isShopAll = e.target.className.includes('shop-all');
@@ -28,13 +23,13 @@ function ProductsPage() {
 	};
 
 	const getAllProducts = () => {
-		return products.map((item) => {
+		return allProducts.map((item) => {
 			return <Item key={item._id} {...item} />;
 		});
 	};
 
 	const getFilteredProducts = () => {
-		return products.filter((item) => item.category === category).map((filteredItem) => {
+		return allProducts.filter((item) => item.category === category).map((filteredItem) => {
 			return <Item key={filteredItem._id} {...filteredItem} />;
 		});
 	};
@@ -54,7 +49,7 @@ function ProductsPage() {
 						every category will be displayed with the same format
 						the only exception is for the category: 'Shop All' (as it has an h2-tag and an icon)
 					*/}
-					{links.map((link, idx) => {
+					{allCategories.map((link, idx) => {
 						if (link !== 'Shop All') {
 							return (
 								<Link to={'/Shopping-Cart/products'} key={idx} onClick={updateCategory}>
