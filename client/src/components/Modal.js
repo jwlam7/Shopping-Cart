@@ -16,12 +16,12 @@ const Modal = () => {
 				<div className={styles.modalSpecs}>
 					<h2>Specs</h2>
 					{specs &&
-						Object.entries(specs).map((spec, idx) => {
+						Object.entries(specs).filter((spec) => !spec.includes('_id')).map((spec, idx) => {
 							const [ key, val ] = spec;
 
 							return (
 								<p key={idx}>
-									{key}: {val}
+									{key.replace('_', ' ')}: {val}
 								</p>
 							);
 						})}
