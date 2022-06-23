@@ -40,7 +40,7 @@ function CartPage() {
 						<h3>PRICE</h3>
 					</span>
 				</div>
-				<div>{cart.map((item) => <CartItem key={item.id} {...item} />)}</div>
+				<div>{cart.map((item) => <CartItem key={item._id} {...item} />)}</div>
 				<div className={styles.cartPageClearCart}>
 					<button onClick={clearCart}>Clear Cart</button>
 				</div>

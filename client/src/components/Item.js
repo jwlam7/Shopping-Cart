@@ -7,7 +7,7 @@ import Notification from './Notification';
 import { useGlobalContext } from '../context/context';
 
 function Item(props) {
-	const { id, name, price, src, alt, largeImage } = props;
+	const { _id, name, price, src, alt, largeImage } = props;
 	const { cart, addToCart, toggleModal } = useGlobalContext();
 	const imgStyles = largeImage ? styles.itemImgContain : styles.itemImgCover;
 	//for creating and displaying alert message
@@ -16,10 +16,10 @@ function Item(props) {
 	//for creating a setTimeout to remove the alert message
 	const timerRef = useRef(null);
 
-	const handleClick = (id) => {
-		const isProductInCart = cart.find((item) => item.id === id);
+	const handleClick = (_id) => {
+		const isProductInCart = cart.find((item) => item._id === _id);
 		if (!isProductInCart) {
-			addToCart(id);
+			addToCart(_id);
 			setNotification({ type: 'success', message: 'Successfully added to cart!' });
 		} else {
 			setNotification({ type: 'info', message: `${name} is already in cart` });
@@ -46,7 +46,7 @@ function Item(props) {
 					<h2>${price}</h2>
 				</div>
 				<div>
-					<button onClick={() => handleClick(id)}>Add to Cart</button>
+					<button onClick={() => handleClick(_id)}>Add to Cart</button>
 				</div>
 			</div>
 		</div>

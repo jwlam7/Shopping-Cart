@@ -5,7 +5,7 @@ import styles from '../css/CartItem.module.css';
 import { useGlobalContext } from '../context/context';
 
 function CartItem(props) {
-	const { id, name, price, src, alt, quantity, largeImage } = props;
+	const { _id, name, price, src, alt, quantity, largeImage } = props;
 	const { removeItem, decrementQuantity, incrementQuantity } = useGlobalContext();
 	const imgStyles = largeImage ? styles.cartItemImgContain : styles.cartItemImgCover;
 
@@ -14,11 +14,11 @@ function CartItem(props) {
 	const quantitySection = () => {
 		return (
 			<div className={styles.cartItemQuantity}>
-				<button onClick={() => decrementQuantity(id)}>
+				<button onClick={() => decrementQuantity(_id)}>
 					<i className='fa-solid fa-minus' />
 				</button>
 				<input value={quantity} readOnly />
-				<button onClick={() => incrementQuantity(id)}>
+				<button onClick={() => incrementQuantity(_id)}>
 					<i className='fa-solid fa-plus' />
 				</button>
 			</div>
@@ -42,7 +42,7 @@ function CartItem(props) {
 
 				<div className={styles.cartItemPrice}>
 					<div>${price * quantity}</div>
-					<button onClick={() => removeItem(id)}>Remove</button>
+					<button onClick={() => removeItem(_id)}>Remove</button>
 				</div>
 			</div>
 
