@@ -60,7 +60,7 @@ const AppProvider = ({ children }) => {
 
 	useEffect(() => {
 		const initializeData = async () => {
-			const response = await fetch('/api');
+			const response = await fetch('https://rejuvenate-store.herokuapp.com/api');
 			const data = await response.json();
 			setAllProducts(data);
 
