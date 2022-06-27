@@ -23,13 +23,13 @@ function ProductsPage() {
 	};
 
 	const getAllProducts = () => {
-		return allProducts.map((item) => {
+		return allProducts?.map((item) => {
 			return <Item key={item._id} {...item} />;
 		});
 	};
 
 	const getFilteredProducts = () => {
-		return allProducts.filter((item) => item.category === category).map((filteredItem) => {
+		return allProducts?.filter((item) => item.category === category).map((filteredItem) => {
 			return <Item key={filteredItem._id} {...filteredItem} />;
 		});
 	};
@@ -49,7 +49,7 @@ function ProductsPage() {
 						every category will be displayed with the same format
 						the only exception is for the category: 'Shop All' (as it has an h2-tag and an icon)
 					*/}
-					{allCategories.map((link, idx) => {
+					{allCategories?.map((link, idx) => {
 						if (link !== 'Shop All') {
 							return (
 								<Link to={'/Shopping-Cart/products'} key={idx} onClick={updateCategory}>
