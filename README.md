@@ -39,7 +39,10 @@ A health and wellness e-commerce application
   - CSS
   - JavaScript
   - React(functional components)
+  - Node/Express
+  - MongoDB/Mongoose
 
 ## Tools
   - React Router(v6) - Client side routing 
-  - GitHub Pages - Hosting
+  - Heroku - Hosting backend
+  - GitHub Pages - Hosting frontend
