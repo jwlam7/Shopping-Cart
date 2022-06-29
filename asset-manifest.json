@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Shopping-Cart/static/css/main.c674ee78.css",
-    "main.js": "/Shopping-Cart/static/js/main.8f38105e.js",
+    "main.css": "/Shopping-Cart/static/css/main.1c057ebd.css",
+    "main.js": "/Shopping-Cart/static/js/main.eb736a1f.js",
     "static/js/787.d6fe38e8.chunk.js": "/Shopping-Cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/kt-tapeman.jpg": "/Shopping-Cart/static/media/kt-tapeman.bf44db64d648d7c8b967.jpg",
     "static/media/logo.jpg": "/Shopping-Cart/static/media/logo.486739c375b93a57530b.jpg",
     "index.html": "/Shopping-Cart/index.html",
-    "main.c674ee78.css.map": "/Shopping-Cart/static/css/main.c674ee78.css.map",
-    "main.8f38105e.js.map": "/Shopping-Cart/static/js/main.8f38105e.js.map",
+    "main.1c057ebd.css.map": "/Shopping-Cart/static/css/main.1c057ebd.css.map",
+    "main.eb736a1f.js.map": "/Shopping-Cart/static/js/main.eb736a1f.js.map",
     "787.d6fe38e8.chunk.js.map": "/Shopping-Cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c674ee78.css",
-    "static/js/main.8f38105e.js"
+    "static/css/main.1c057ebd.css",
+    "static/js/main.eb736a1f.js"
   ]
 }
