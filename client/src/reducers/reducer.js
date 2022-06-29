@@ -6,6 +6,8 @@ const reducer = (state, action) => {
 			return { ...state, allCategories: action.payload };
 		case 'SET_CATEGORY':
 			return { ...state, category: action.payload };
+		case 'SET_LOADING':
+			return { ...state, loading: action.payload };
 		case 'ADD_TO_CART':
 			const item = state.allProducts.find((item) => item._id === action.payload);
 			return { ...state, cart: [ ...state.cart, item ] };

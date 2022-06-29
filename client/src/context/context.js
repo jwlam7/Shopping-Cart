@@ -8,7 +8,8 @@ const initialState = {
 	totalDollars: 0, //$ of item(s) in cart
 	category: 'ALL PRODUCTS', //filter products by category
 	showModal: false, //open or close modal
-	modalDetails: {} //temporarily store current item, to display details in modal
+	modalDetails: {}, //temporarily store current item, to display details in modal
+	loading: false
 };
 
 const AppContext = createContext();
@@ -25,6 +26,10 @@ const AppProvider = ({ children }) => {
 
 	const setCategory = (category) => {
 		dispatch({ type: 'SET_CATEGORY', payload: category });
+	};
+
+	const setLoading = (isLoading) => {
+		dispatch({ type: 'SET_LOADING', payload: isLoading });
 	};
 
 	const addToCart = (id) => {
@@ -60,12 +65,19 @@ const AppProvider = ({ children }) => {
 
 	useEffect(() => {
 		const initializeData = async () => {
-			const response = await fetch('https://rejuvenate-store.herokuapp.com/api');
-			const data = await response.json();
-			setAllProducts(data);
+			setLoading(true);
+			try {
+				const response = await fetch('https://rejuvenate-store.herokuapp.com/api');
+				const data = await response.json();
+				setAllProducts(data);
 
-			const allCategories = await data.products.map((item) => item.category);
-			setAllCategories([ ...new Set(allCategories), 'Shop All' ]);
+				const allCategories = await data.products.map((item) => item.category);
+				setAllCategories([ ...new Set(allCategories), 'Shop All' ]);
+				setLoading(false);
+			} catch (error) {
+				console.log(error);
+				setLoading(false);
+			}
 		};
 
 		initializeData();
