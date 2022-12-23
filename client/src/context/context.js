@@ -67,7 +67,7 @@ const AppProvider = ({ children }) => {
 		const initializeData = async () => {
 			setLoading(true);
 			try {
-				const response = await fetch('https://rejuvenate-store.herokuapp.com/api');
+				const response = await fetch('https://shopping-cart-rirw.onrender.com/api');
 				const data = await response.json();
 				setAllProducts(data);
 
