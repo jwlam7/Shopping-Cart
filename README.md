@@ -44,5 +44,5 @@ A health and wellness e-commerce application
 
 ## Tools
   - React Router(v6) - Client side routing 
-  - Heroku - Hosting backend
+  - Render - Hosting backend
   - GitHub Pages - Hosting frontend
