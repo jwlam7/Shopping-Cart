@@ -19,6 +19,7 @@ function CartPage() {
 		return (
 			<div className={styles.cartPageCartEmpty}>
 				<h1>Your cart is empty. Let's change that.</h1>
+				<img src={require('../images/snorlax2.png')} alt='snorlax' className={styles.cartPageSnorlax}></img>
 				<Link to={'/Shopping-Cart/products'} className={styles.cartPageShopBtn}>
 					SHOP NOW{'  '}
 					<i className='fas fa-long-arrow-alt-right' />

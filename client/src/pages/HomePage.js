@@ -25,7 +25,8 @@ function HomePage() {
 					<hr />
 				</div>
 				<div>
-					<h2>Join the Fam!</h2>
+					<h2>Join the fam!</h2>
+					<img src={require('../images/snorlax.jpg')} alt='snorlax' className={styles.homePageSnorlax}></img>
 					<h3>Sign up for the latest news / exclusive offers</h3>
 					<form className={styles.homePageForm}>
 						<input className={styles.homePageEmailInput} type='text' placeholder='Email Address' />

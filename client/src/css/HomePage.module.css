@@ -59,11 +59,23 @@
 	cursor: pointer;
 }
 
+.homePageSnorlax {
+	width: 60%;
+}
+
 /* ------------------------------------------------ */
+@media (max-width: 1200px) {
+	.homePageShopBtn {
+		font-size: 1.2em;
+	}
+}
 
 @media (max-width: 975px) {
 	.homePageTitle {
 		font-size: 2.5em;
+	}
+	.homePageSnorlax {
+		width: 50%;
 	}
 }
 
