@@ -113,6 +113,19 @@
 	box-shadow: 1px 1px 5px black;
 }
 
+.cartPageSnorlax:hover {
+	animation: snorlax-jiggle 0.3s ease-in-out; 
+}
+
+@keyframes snorlax-jiggle {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(5deg);}
+	50% {transform: rotate(0deg);}
+	75% {transform: rotate(-5deg);}
+	100% {transform: rotate(0deg);}
+	
+}
+
 /* ------------------------------------------------ */
 
 @media (max-width: 1000px) {
