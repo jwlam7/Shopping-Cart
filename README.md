@@ -1,7 +1,5 @@
 # Shopping-Cart
 
-#### Live site: https://jonlam1989.github.io/Shopping-Cart/
-
 ## Description
 
 A health and wellness e-commerce application
